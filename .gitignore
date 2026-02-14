@@ -19,9 +19,8 @@ data/raw_html/*
 !data/raw_html/.gitkeep
 data/raw_html_srigurugranth/
 
-# data/corpus/ — regenerable (published as GitHub Release)
-data/corpus/*
-!data/corpus/.gitkeep
+# data/corpus/ — the canonical JSONL database is tracked
+# (regenerable via scripts/download_srigurugranth.py)
 
 # data/derived/ — all regenerable from pipeline
 data/derived/*
