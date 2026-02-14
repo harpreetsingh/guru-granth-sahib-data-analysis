@@ -1,0 +1,109 @@
+# GGS Textual Analysis — CI Pipeline (bd-3jj.10)
+#
+# Runs ALL quality gates on every push and pull request:
+#   1. Linting (ruff)
+#   2. Type checking (ty)
+#   3. Unit tests (pytest)
+#   4. Property-based tests with fixed seed
+#   5. Roundtrip/determinism tests
+#   6. Lexicon lint
+#
+# Constraints:
+#   - No network access (fixture data only, no scraping)
+#   - No large data files (Ang 1-5 HTML fixtures only)
+#   - Must complete in < 5 minutes
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint & Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python 3.14
+        run: uv python install 3.14
+
+      - name: Install dependencies
+        run: uv sync --all-extras
+
+      - name: Ruff lint
+        run: uv run ruff check src/ tests/
+
+      - name: Type check
+        run: uvx ty check
+
+  test:
+    name: Test Suite
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python 3.14
+        run: uv python install 3.14
+
+      - name: Install dependencies
+        run: uv sync --all-extras
+
+      - name: Unit tests (fast)
+        run: >
+          uv run pytest tests/
+          -x
+          -k "not test_properties and not test_roundtrip"
+          --tb=short
+
+      - name: Property-based tests (fixed seed)
+        run: >
+          uv run pytest tests/test_properties.py
+          -x
+          --hypothesis-seed=0
+          --tb=short
+
+      - name: Roundtrip / determinism tests
+        run: >
+          uv run pytest tests/test_roundtrip.py
+          -x
+          --tb=short
+
+  lexicon-lint:
+    name: Lexicon Lint
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python 3.14
+        run: uv python install 3.14
+
+      - name: Install dependencies
+        run: uv sync --all-extras
+
+      - name: Lint lexicon YAML files
+        run: uv run ggs lexicon lint

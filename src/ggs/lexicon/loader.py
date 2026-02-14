@@ -325,6 +325,12 @@ def load_lexicon(
         # Hash the file for provenance
         index.file_hashes[path.name] = _file_sha256(path)
 
+        # Skip files that use a different schema (e.g., polysemy.yaml
+        # uses a polysemy registry format, not entity definitions)
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+        if data is None or "entities" not in data:
+            continue
+
         # Load and validate
         entities = load_lexicon_file(path)
 
