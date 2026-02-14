@@ -17,6 +17,7 @@ uv.lock
 # data/raw_html/ — large, regenerable from scrape
 data/raw_html/*
 !data/raw_html/.gitkeep
+data/raw_html_srigurugranth/
 
 # data/corpus/ — regenerable (published as GitHub Release)
 data/corpus/*

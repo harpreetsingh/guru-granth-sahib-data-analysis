@@ -154,39 +154,36 @@ def _extract_gurmukhi_lines(soup: BeautifulSoup) -> list[str]:
     """Extract Gurmukhi text lines from SriGranth HTML.
 
     SriGranth.org renders each ang as a table-based layout.
-    Gurmukhi lines appear in table cells with specific class names
-    or font styling.  This function extracts the raw Gurmukhi text
-    from those cells.
+    Gurmukhi lines appear in ``<FONT face=AnmolUniPr>`` elements,
+    one per line, with dictionary links wrapping each word.
 
     The extraction strategy:
-    1. Look for elements with class containing 'gurm' or 'punjabi'
-    2. Fall back to font-face detection for Gurmukhi Unicode ranges
-    3. Filter out translation/transliteration lines
+    1. Look for ``<font face=AnmolUniPr>`` elements (primary)
+    2. Fall back to ``<td>`` scanning with Gurmukhi ratio filter
     """
     lines: list[str] = []
 
-    # Strategy 1: Look for table rows containing Gurmukhi class markers
-    # SriGranth uses various class names and font-face references
-    gurmukhi_elements = soup.find_all(
-        ["td", "div", "span", "p"],
-        class_=re.compile(r"gurm|punjabi|gurbani", re.IGNORECASE),
-    )
-
-    if gurmukhi_elements:
-        for elem in gurmukhi_elements:
-            text = elem.get_text(strip=True)
+    # Strategy 1: Target <FONT face=AnmolUniPr> elements directly.
+    # This is how SriGranth.org marks Gurmukhi text — via font-face,
+    # not CSS classes.
+    for font_elem in soup.find_all("font"):
+        face = font_elem.get("face", "")
+        if not isinstance(face, str):
+            continue
+        if face.lower().startswith("anmol"):
+            text = font_elem.get_text(separator=" ", strip=True)
+            # Collapse multiple spaces from link separators
+            text = re.sub(r"\s+", " ", text).strip()
             if text and _contains_gurmukhi(text):
                 lines.append(text)
-        if lines:
-            return lines
 
-    # Strategy 2: Find all text nodes containing Gurmukhi characters
-    # This is a broader search when class-based extraction fails
+    if lines:
+        return lines
+
+    # Strategy 2: Broader fallback — scan all <td> elements
     for td in soup.find_all("td"):
         text = td.get_text(strip=True)
         if text and _contains_gurmukhi(text) and len(text) > 2:
-            # Skip very short strings (likely numerals or labels)
-            # Also skip cells that are primarily non-Gurmukhi
             gurmukhi_ratio = _gurmukhi_char_ratio(text)
             if gurmukhi_ratio > 0.3:
                 lines.append(text)
