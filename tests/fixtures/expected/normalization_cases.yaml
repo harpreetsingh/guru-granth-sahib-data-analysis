@@ -1,0 +1,69 @@
+# Expected normalization results for fixture-based testing.
+# Each case specifies input, config policy, and expected output.
+# These are the ground truth for test_normalize.py regression tests.
+
+defaults:
+  nukta_policy: PRESERVE
+  nasal_policy: CANONICAL_TIPPI
+  vishram_policy: STRIP
+  halant_policy: DECOMPOSE
+
+cases:
+  # --- Basic Mool Mantar ---
+  - name: mool_mantar
+    input: "ੴ ਸਤਿ ਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ ਅਕਾਲ ਮੂਰਤਿ ਅਜੂਨੀ ਸੈਭੰ ਗੁਰ ਪ੍ਰਸਾਦਿ ॥"
+    expected: "ੴ ਸਤਿ ਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ ਅਕਾਲ ਮੂਰਤਿ ਅਜੂਨੀ ਸੈਭੰ ਗੁਰ ਪ੍ਰਸਾਦਿ"
+
+  # --- Zero-width character stripping ---
+  - name: zwj_stripping
+    input: "ਸ\u200Dਤਿ ਨਾ\u200Cਮੁ"
+    expected: "ਸਤਿ ਨਾਮੁ"
+
+  # --- Whitespace normalization ---
+  - name: whitespace_collapse
+    input: "  ਸਤਿ   ਨਾਮੁ   ਕਰਤਾ  "
+    expected: "ਸਤਿ ਨਾਮੁ ਕਰਤਾ"
+
+  # --- Nasal: Bindi to Tippi (default) ---
+  - name: nasal_bindi_to_tippi
+    input: "ਸਂਤ ਨਾਮੁ"
+    expected: "ਸੰਤ ਨਾਮੁ"
+
+  # --- Vishram stripping (double danda) ---
+  - name: vishram_double_danda
+    input: "ਸਤਿ ਨਾਮੁ ॥"
+    expected: "ਸਤਿ ਨਾਮੁ"
+
+  # --- Idempotency check ---
+  - name: idempotent
+    input: "ੴ ਸਤਿ ਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ"
+    expected: "ੴ ਸਤਿ ਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ"
+    note: "Already normalized — output must equal input"
+
+  # --- Nukta STRIP policy ---
+  - name: nukta_strip
+    input: "ਖ਼ਾਲਸਾ ਫ਼ਤਿਹ"
+    nukta_policy: STRIP
+    expected: "ਖਾਲਸਾ ਫਤਿਹ"
+
+  # --- Nukta PRESERVE policy ---
+  - name: nukta_preserve
+    input: "ਖ਼ਾਲਸਾ ਫ਼ਤਿਹ"
+    nukta_policy: PRESERVE
+    expected: "ਖ਼ਾਲਸਾ ਫ਼ਤਿਹ"
+
+  # --- Nasal CANONICAL_BINDI policy ---
+  - name: nasal_tippi_to_bindi
+    input: "ਸੰਤ ਨਾਮੁ"
+    nasal_policy: CANONICAL_BINDI
+    expected: "ਸਂਤ ਨਾਮੁ"
+
+  # --- Empty input ---
+  - name: empty_string
+    input: ""
+    expected: ""
+
+  # --- Whitespace only ---
+  - name: whitespace_only
+    input: "   \t  \n  "
+    expected: ""

@@ -1,0 +1,215 @@
+# ============================================================================
+# Canonical Ragas of the Guru Granth Sahib
+# ============================================================================
+# 31 principal ragas under which the scripture is organized.
+# Used by the parser to validate raga headers and by downstream analysis
+# for raga-conditioned breakdowns.
+#
+# Note: Angs 1-13 contain Japji Sahib, Jap, and other preamble compositions
+# that precede the raga sections.  Angs 1354-1430 contain Salok Sehskritee,
+# Mundavani, Raagmala and other epilogue compositions.
+# ============================================================================
+
+# Pre-raga section (not a raga, but included for completeness)
+preamble:
+  gurmukhi: null
+  romanized: "Preamble"
+  ang_start: 1
+  ang_end: 13
+  notes: "Japji Sahib, Jap, Tav-Prasad Savaiye, etc."
+
+# The 31 canonical ragas, in order of appearance
+ragas:
+  - id: SRI
+    gurmukhi: ਸਿਰੀ ਰਾਗੁ
+    romanized: Sri Raag
+    ang_start: 14
+    ang_end: 93
+
+  - id: MAJH
+    gurmukhi: ਮਾਝ
+    romanized: Raag Maajh
+    ang_start: 94
+    ang_end: 150
+
+  - id: GAURI
+    gurmukhi: ਗਉੜੀ
+    romanized: Raag Gauri
+    ang_start: 151
+    ang_end: 346
+
+  - id: ASA
+    gurmukhi: ਆਸਾ
+    romanized: Raag Aasaa
+    ang_start: 347
+    ang_end: 488
+
+  - id: GUJRI
+    gurmukhi: ਗੂਜਰੀ
+    romanized: Raag Gujri
+    ang_start: 489
+    ang_end: 526
+
+  - id: DEVGANDHARI
+    gurmukhi: ਦੇਵਗੰਧਾਰੀ
+    romanized: Raag Devgandhari
+    ang_start: 527
+    ang_end: 536
+
+  - id: BIHAGRA
+    gurmukhi: ਬਿਹਾਗੜਾ
+    romanized: Raag Bihagra
+    ang_start: 537
+    ang_end: 556
+
+  - id: VADHANS
+    gurmukhi: ਵਡਹੰਸੁ
+    romanized: Raag Vadhans
+    ang_start: 557
+    ang_end: 594
+
+  - id: SORATH
+    gurmukhi: ਸੋਰਠਿ
+    romanized: Raag Sorath
+    ang_start: 595
+    ang_end: 659
+
+  - id: DHANASRI
+    gurmukhi: ਧਨਾਸਰੀ
+    romanized: Raag Dhanasri
+    ang_start: 660
+    ang_end: 695
+
+  - id: JAITSRI
+    gurmukhi: ਜੈਤਸਰੀ
+    romanized: Raag Jaitsri
+    ang_start: 696
+    ang_end: 710
+
+  - id: TODI
+    gurmukhi: ਟੋਡੀ
+    romanized: Raag Todi
+    ang_start: 711
+    ang_end: 718
+
+  - id: BAIRARI
+    gurmukhi: ਬੈਰਾੜੀ
+    romanized: Raag Bairari
+    ang_start: 719
+    ang_end: 720
+
+  - id: TILANG
+    gurmukhi: ਤਿਲੰਗ
+    romanized: Raag Tilang
+    ang_start: 721
+    ang_end: 727
+
+  - id: SUHI
+    gurmukhi: ਸੂਹੀ
+    romanized: Raag Suhi
+    ang_start: 728
+    ang_end: 794
+
+  - id: BILAVAL
+    gurmukhi: ਬਿਲਾਵਲੁ
+    romanized: Raag Bilaval
+    ang_start: 795
+    ang_end: 858
+
+  - id: GOND
+    gurmukhi: ਗੋਂਡ
+    romanized: Raag Gond
+    ang_start: 859
+    ang_end: 875
+
+  - id: RAMKALI
+    gurmukhi: ਰਾਮਕਲੀ
+    romanized: Raag Ramkali
+    ang_start: 876
+    ang_end: 974
+
+  - id: NUT_NARAYAN
+    gurmukhi: ਨਟ ਨਾਰਾਇਣ
+    romanized: Raag Nut-Narayan
+    ang_start: 975
+    ang_end: 983
+
+  - id: MALI_GAURA
+    gurmukhi: ਮਾਲੀ ਗਉੜਾ
+    romanized: Raag Mali Gaura
+    ang_start: 984
+    ang_end: 988
+
+  - id: MARU
+    gurmukhi: ਮਾਰੂ
+    romanized: Raag Maru
+    ang_start: 989
+    ang_end: 1106
+
+  - id: TUKHARI
+    gurmukhi: ਤੁਖਾਰੀ
+    romanized: Raag Tukhari
+    ang_start: 1107
+    ang_end: 1117
+
+  - id: KEDARA
+    gurmukhi: ਕੇਦਾਰਾ
+    romanized: Raag Kedara
+    ang_start: 1118
+    ang_end: 1124
+
+  - id: BHAIRAV
+    gurmukhi: ਭੈਰਉ
+    romanized: Raag Bhairav
+    ang_start: 1125
+    ang_end: 1167
+
+  - id: BASANT
+    gurmukhi: ਬਸੰਤੁ
+    romanized: Raag Basant
+    ang_start: 1168
+    ang_end: 1196
+
+  - id: SARANG
+    gurmukhi: ਸਾਰੰਗ
+    romanized: Raag Sarang
+    ang_start: 1197
+    ang_end: 1253
+
+  - id: MALHAAR
+    gurmukhi: ਮਲ੍ਹਾਰ
+    romanized: Raag Malhaar
+    ang_start: 1254
+    ang_end: 1293
+
+  - id: KANRA
+    gurmukhi: ਕਾਨੜਾ
+    romanized: Raag Kanra
+    ang_start: 1294
+    ang_end: 1318
+
+  - id: KALYAN
+    gurmukhi: ਕਲਿਆਣ
+    romanized: Raag Kalyan
+    ang_start: 1319
+    ang_end: 1326
+
+  - id: PARBHATI
+    gurmukhi: ਪ੍ਰਭਾਤੀ
+    romanized: Raag Parbhati
+    ang_start: 1327
+    ang_end: 1351
+
+  - id: JAIJAWANTI
+    gurmukhi: ਜੈਜਾਵੰਤੀ
+    romanized: Raag Jaijawanti
+    ang_start: 1352
+    ang_end: 1353
+
+# Post-raga epilogue section
+epilogue:
+  gurmukhi: null
+  romanized: "Epilogue"
+  ang_start: 1354
+  ang_end: 1430
+  notes: "Salok Sehskritee, Gatha, Phunhay, Chaubole, Salok Kabir, Salok Farid, Savaiye, Mundavani, Raagmala"

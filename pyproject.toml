@@ -46,3 +46,7 @@ src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "B", "SIM", "RUF"]
+# RUF001/RUF003: Gurmukhi Unicode is the primary content of this project,
+# not "ambiguous" characters.  These rules are designed for Latin-script
+# projects where Cyrillic/Greek lookalikes sneak in accidentally.
+ignore = ["RUF001", "RUF002", "RUF003"]

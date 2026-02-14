@@ -1,0 +1,149 @@
+# ============================================================================
+# GGS Textual Analysis — Master Configuration
+# ============================================================================
+# All pipeline behaviour is driven by this file.  Every threshold, policy,
+# and path appears here so that:
+#   1. Different configs produce different (but reproducible) results
+#   2. This file is captured in run_manifest.json for provenance
+#   3. Sensitivity analysis is possible by varying one parameter at a time
+# ============================================================================
+
+# ---------------------------------------------------------------------------
+# Source configuration (Section 3.1)
+# ---------------------------------------------------------------------------
+source:
+  primary: srigranth
+  cross_validate: [gurbaninow]
+  sample_size: 50                # Angs sampled for cross-validation
+
+# ---------------------------------------------------------------------------
+# Scraping protocol (Section 3.2)
+# ---------------------------------------------------------------------------
+scraping:
+  ang_start: 1
+  ang_end: 1430
+  request_delay_ms_min: 500
+  request_delay_ms_max: 1500
+  max_retries: 5
+  user_agent: "ggs-text-analysis/0.1.0"
+
+# ---------------------------------------------------------------------------
+# Normalization policies (Section 3.4)
+# ---------------------------------------------------------------------------
+normalization:
+  unicode: NFC
+  nukta_policy: PRESERVE            # PRESERVE | STRIP | DUAL
+  nasal_policy: CANONICAL_TIPPI     # CANONICAL_TIPPI | CANONICAL_BINDI | PRESERVE
+  vishram_policy: STRIP             # STRIP | PRESERVE_SEPARATE
+  zwj_policy: STRIP                 # always STRIP (no config variant)
+  halant_policy: DECOMPOSE          # DECOMPOSE | PRESERVE
+
+# ---------------------------------------------------------------------------
+# Lexicon paths (Section 4.1)
+# ---------------------------------------------------------------------------
+lexicon_paths:
+  entities: lexicon/entities.yaml
+  nirgun: lexicon/nirgun.yaml
+  sagun_narrative: lexicon/sagun_narrative.yaml
+  perso_arabic: lexicon/perso_arabic.yaml
+  sanskritic: lexicon/sanskritic.yaml
+  polysemy: lexicon/polysemy.yaml
+
+# ---------------------------------------------------------------------------
+# Co-occurrence settings (Section 5.1)
+# ---------------------------------------------------------------------------
+cooccurrence:
+  min_entity_freq: 10               # Exclude entities with fewer occurrences
+  smoothing_k: 1                    # Laplace smoothing factor
+  min_pmi_support: 5                # Minimum co-occurrence count for PMI
+
+# ---------------------------------------------------------------------------
+# Tagging configuration (Section 6.1)
+# ---------------------------------------------------------------------------
+tagging:
+  context_weight: 0.2               # Weight for shabad-level context signal
+  dimensions:
+    nirgun:
+      sigmoid_k: 2.0
+      sigmoid_x0: 1.5
+      rules:
+        - match_entity: [WAHEGURU, NIRANKAR, FORMLESS_EPITHETS]
+          weight: 1.0
+        - match_register: sanskritic
+          weight: 0.3
+        - has_negation_of_form: true
+          weight: 0.8
+    sagun_narrative:
+      sigmoid_k: 2.0
+      sigmoid_x0: 1.5
+      rules:
+        - match_entity: [RAM_NARRATIVE, KRISHNA_NARRATIVE, SHIVA]
+          weight: 1.0
+        - match_register: perso_arabic
+          weight: 0.0
+    critique_ritual:
+      sigmoid_k: 2.5
+      sigmoid_x0: 1.0
+      rules:
+        - match_entity: [RITUAL_MARKERS]
+          weight: 0.5
+        - co_occurs_negation: true
+          weight: 1.5
+    universalism:
+      sigmoid_k: 2.0
+      sigmoid_x0: 1.5
+      rules:
+        - match_entity: [UNIVERSAL_EPITHETS]
+          weight: 1.0
+    critique_clerics:
+      sigmoid_k: 2.5
+      sigmoid_x0: 1.0
+      rules:
+        - match_entity: [CLERIC_MARKERS]
+          weight: 0.5
+        - co_occurs_negation: true
+          weight: 1.5
+
+  # Category derivation thresholds
+  thresholds:
+    nirgun_leaning:
+      nirgun_min: 0.6
+      sagun_max: 0.3
+    sagun_narrative_leaning:
+      sagun_min: 0.6
+      nirgun_max: 0.3
+    mixed:
+      difference_max: 0.3
+      both_min: 0.2
+    universalism:
+      min: 0.5
+    critique_ritual:
+      min: 0.5
+    critique_clerics:
+      min: 0.5
+
+# ---------------------------------------------------------------------------
+# Register density / windowed analysis (Section 5.2)
+# ---------------------------------------------------------------------------
+register_density:
+  window_size: 20                   # Sliding window of W angs
+
+# ---------------------------------------------------------------------------
+# Statistical guardrails (Section 5.3)
+# ---------------------------------------------------------------------------
+statistics:
+  min_support: 20                   # Minimum support for log-odds reporting
+  bootstrap_samples: 1000           # Bootstrap CI iterations
+
+# ---------------------------------------------------------------------------
+# Error handling (Section 2.1)
+# ---------------------------------------------------------------------------
+error_handling:
+  max_record_errors: 100            # Abort if ERROR count exceeds this
+  strict_mode: false                # If true, treat WARNINGs as ERRORs
+
+# ---------------------------------------------------------------------------
+# Parallelism (Section 9)
+# ---------------------------------------------------------------------------
+parallelism:
+  workers: null                     # null = cpu_count()

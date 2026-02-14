@@ -1,0 +1,65 @@
+# ============================================================================
+# Polysemy Registry — polysemy.yaml
+# ============================================================================
+# Maps surface forms that are genuinely ambiguous to multiple possible
+# entity_ids with context hints for downstream disambiguation.
+#
+# This is essential for intellectual honesty: when a word has multiple
+# valid interpretations in the GGS, we flag it rather than silently
+# choosing one reading.
+#
+# Usage:
+#   - Phase 1 (matching): Records BOTH entities with confidence=MEDIUM
+#   - Phase 3 (tagging): May resolve using context
+#   - Web app: Shows uncertainty markers for polysemous matches
+#
+# Reference: PLAN.md Section 4.1 (polysemy registry)
+# Schema: lexicon/_schema.yaml
+# ============================================================================
+
+polysemy:
+  # -------------------------------------------------------------------------
+  # ਰਾਮ (Ram) — the most analytically important polysemy
+  # -------------------------------------------------------------------------
+  # This is one of the most studied questions in Sikh scholarship:
+  # when the Gurus say "Ram", do they mean the formless divine
+  # or the avatar Ramchandra? The answer varies by context.
+  ਰਾਮ:
+    entities: [RAM, RAMCHANDRA]
+    context_hints:
+      - "When preceded/followed by nirgun markers (ਨਿਰੰਕਾਰ, ਅਕਾਲ, etc.), likely RAM (divine)"
+      - "When in mythological narrative context (with ਸੀਤਾ, ਰਾਵਣ, etc.), likely RAMCHANDRA"
+      - "In isolation or with devotional language, default to RAM (divine) — the dominant usage in GGS"
+
+  ਰਾਮੁ:
+    entities: [RAM, RAMCHANDRA]
+    context_hints:
+      - "Same as ਰਾਮ — oblique case variant"
+
+  # -------------------------------------------------------------------------
+  # ਕਰਮ (Karam) — actions, deeds, or divine grace
+  # -------------------------------------------------------------------------
+  # The word ਕਰਮ in the GGS can mean:
+  # 1. Ritual actions (karm-kand, external religious acts — often critiqued)
+  # 2. Divine grace/blessing (nadar, kirpa — a different concept entirely)
+  # The distinction is crucial for the critique-of-ritual analysis.
+  ਕਰਮ:
+    entities: [KARAM]
+    context_hints:
+      - "When paired with negation (ਬਿਨੁ ਕਰਮ), likely means 'divine grace'"
+      - "When in ritual context (with ਪੂਜਾ, ਤੀਰਥ, etc.), likely means 'ritual actions'"
+      - "Note: single entity but with polysemous meaning flagged for manual review"
+
+  # -------------------------------------------------------------------------
+  # ਗੁਰ / ਗੁਰੂ (Guru) — multiple referents
+  # -------------------------------------------------------------------------
+  # In the GGS, 'Guru' can refer to:
+  # - The divine as Guru (universal teacher)
+  # - The human Guru (the historical Sikh Gurus)
+  # - The Shabad as Guru (the Word itself as teacher)
+  # These are theologically interconnected but analytically distinct.
+  ਗੁਰੂ:
+    entities: [GUR, SATGUR]
+    context_hints:
+      - "When with ਸਤਿ prefix, maps to SATGUR"
+      - "In general usage, maps to GUR (divine teacher concept)"

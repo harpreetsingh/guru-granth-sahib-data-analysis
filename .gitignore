@@ -13,13 +13,33 @@ build/
 uv.lock
 
 # Pipeline artifacts (large, regenerable)
-data/raw_html/
-data/corpus/
-data/derived/
-data/reports/
-data/web_bundle/
-data/gold/
-.cache/
+# -----------------------------------------------------------------
+# data/raw_html/ — large, regenerable from scrape
+data/raw_html/*
+!data/raw_html/.gitkeep
+
+# data/corpus/ — regenerable (published as GitHub Release)
+data/corpus/*
+!data/corpus/.gitkeep
+
+# data/derived/ — all regenerable from pipeline
+data/derived/*
+!data/derived/.gitkeep
+
+# data/web_bundle/ — regenerable from bundle step
+data/web_bundle/*
+!data/web_bundle/.gitkeep
+!data/web_bundle/corpus/
+data/web_bundle/corpus/*
+!data/web_bundle/corpus/.gitkeep
+
+# data/reports/ — small, curated; TRACKED
+# data/gold/ — gold standard labels; TRACKED
+# (no gitignore rules for these — they are committed)
+
+# Incremental processing cache (ephemeral, never committed)
+.cache/*
+!.cache/.gitkeep
 
 # bv (beads viewer) local config and caches
 .bv/

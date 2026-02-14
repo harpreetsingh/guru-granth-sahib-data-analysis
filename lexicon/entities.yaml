@@ -1,0 +1,347 @@
+# ============================================================================
+# Core Lexicon — entities.yaml
+# ============================================================================
+# Core divine names and general entities used across the Guru Granth Sahib.
+# These are the high-frequency, cross-tradition terms that form the backbone
+# of the lexical analysis.
+#
+# Reference: PLAN.md Section 4.1
+# Schema: lexicon/_schema.yaml
+# ============================================================================
+
+entities:
+  # -------------------------------------------------------------------------
+  # Divine names — universal / cross-tradition
+  # -------------------------------------------------------------------------
+
+  - id: WAHEGURU
+    canonical_form: ਵਾਹਿਗੁਰੂ
+    aliases:
+      - form: ਵਾਹਿਗੁਰੂ
+        type: exact
+      - form: ਵਾਹੁ
+        type: exact
+    category: divine_name
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Wondrous Lord — distinctly Sikh name for the divine"
+
+  - id: HARI
+    canonical_form: ਹਰਿ
+    aliases:
+      - form: ਹਰਿ
+        type: exact
+      - form: ਹਰੀ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Most frequent divine name in GGS. Used universally, not tied to Vishnu."
+
+  - id: RAM
+    canonical_form: ਰਾਮ
+    aliases:
+      - form: ਰਾਮ
+        type: exact
+      - form: ਰਾਮੁ
+        type: exact
+      - form: ਰਾਮਿ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: true
+    added_version: "1.0.0"
+    notes: "All-pervading divine. Polysemous: can refer to formless God or Ramchandra."
+
+  - id: GOBIND
+    canonical_form: ਗੋਬਿੰਦ
+    aliases:
+      - form: ਗੋਬਿੰਦ
+        type: exact
+      - form: ਗੋਬਿੰਦੁ
+        type: exact
+      - form: ਗੋਵਿੰਦ
+        type: exact
+      - form: ਗੋਵਿੰਦੁ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Sustainer of the world. Used in GGS as a name for God."
+
+  - id: ALLAH
+    canonical_form: ਅੱਲਾਹ
+    aliases:
+      - form: ਅਲਾਹੁ
+        type: exact
+      - form: ਅਲਹ
+        type: exact
+      - form: ਅੱਲਾਹ
+        type: exact
+      - form: ਅੱਲਾ
+        type: exact
+    category: divine_name
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Arabic name for God, used in GGS in universalist context"
+
+  - id: PRABH
+    canonical_form: ਪ੍ਰਭ
+    aliases:
+      - form: ਪ੍ਰਭ
+        type: exact
+      - form: ਪ੍ਰਭੁ
+        type: exact
+      - form: ਪ੍ਰਭੂ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Lord/Master — frequent divine epithet in GGS"
+
+  - id: SATGUR
+    canonical_form: ਸਤਿਗੁਰ
+    aliases:
+      - form: ਸਤਿਗੁਰ
+        type: exact
+      - form: ਸਤਿਗੁਰੁ
+        type: exact
+      - form: ਸਤਿਗੁਰਿ
+        type: exact
+      - form: ਸਤਿਗੁਰੂ
+        type: exact
+    category: divine_name
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "True Guru — central concept, divine teacher"
+
+  - id: THAKUR
+    canonical_form: ਠਾਕੁਰ
+    aliases:
+      - form: ਠਾਕੁਰ
+        type: exact
+      - form: ਠਾਕੁਰੁ
+        type: exact
+      - form: ਠਾਕੁਰਿ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Lord/Master — divine epithet"
+
+  - id: SAHIB
+    canonical_form: ਸਾਹਿਬ
+    aliases:
+      - form: ਸਾਹਿਬ
+        type: exact
+      - form: ਸਾਹਿਬੁ
+        type: exact
+      - form: ਸਾਹਿਬਿ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Lord/Master — Perso-Arabic origin, used for God in GGS"
+
+  - id: KHUDA
+    canonical_form: ਖ਼ੁਦਾ
+    aliases:
+      - form: ਖੁਦਾਇ
+        type: exact
+      - form: ਖੁਦਾਇਆ
+        type: exact
+      - form: ਖੁਦਾਈ
+        type: exact
+    category: divine_name
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Persian name for God"
+
+  # -------------------------------------------------------------------------
+  # Core theological concepts
+  # -------------------------------------------------------------------------
+
+  - id: NAAM
+    canonical_form: ਨਾਮੁ
+    aliases:
+      - form: ਨਾਮੁ
+        type: exact
+      - form: ਨਾਮ
+        type: exact
+      - form: ਨਾਉ
+        type: exact
+      - form: ਨਾਇ
+        type: exact
+      - form: ਨਾਮਿ
+        type: exact
+    category: concept
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "The Name — divine identity, central Sikh concept"
+
+  - id: HUKAM
+    canonical_form: ਹੁਕਮੁ
+    aliases:
+      - form: ਹੁਕਮੁ
+        type: exact
+      - form: ਹੁਕਮਿ
+        type: exact
+      - form: ਹੁਕਮੀ
+        type: exact
+      - form: ਹੁਕਮੈ
+        type: exact
+    category: concept
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Divine Will/Order — key concept in Japji Sahib"
+
+  - id: SATNAM
+    canonical_form: ਸਤਿ ਨਾਮੁ
+    aliases:
+      - form: ਸਤਿ ਨਾਮੁ
+        type: exact
+    category: concept
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "True Name — fundamental concept in Sikh theology"
+
+  - id: SACH
+    canonical_form: ਸਚੁ
+    aliases:
+      - form: ਸਚੁ
+        type: exact
+      - form: ਸਚਿ
+        type: exact
+      - form: ਸਚਾ
+        type: exact
+      - form: ਸਚੇ
+        type: exact
+      - form: ਸੱਚ
+        type: exact
+    category: concept
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Truth — foundational concept. Appears in Mool Mantar."
+
+  - id: GUR
+    canonical_form: ਗੁਰ
+    aliases:
+      - form: ਗੁਰ
+        type: exact
+      - form: ਗੁਰੁ
+        type: exact
+      - form: ਗੁਰੂ
+        type: exact
+      - form: ਗੁਰਿ
+        type: exact
+    category: concept
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Guru — divine teacher/enlightener"
+
+  # -------------------------------------------------------------------------
+  # Negation markers (for co-occurrence analysis)
+  # -------------------------------------------------------------------------
+
+  - id: NA_NEGATION
+    canonical_form: ਨਾ
+    aliases:
+      - form: ਨਾ
+        type: exact
+      - form: ਨਾਹੀ
+        type: exact
+      - form: ਨਹੀ
+        type: exact
+    category: negation
+    tradition: null
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Negation particle — used to detect critique-of-ritual patterns"
+
+  - id: BINU_NEGATION
+    canonical_form: ਬਿਨੁ
+    aliases:
+      - form: ਬਿਨੁ
+        type: exact
+      - form: ਬਿਨ
+        type: exact
+      - form: ਬਿਨਾ
+        type: exact
+      - form: ਬਾਝੁ
+        type: exact
+      - form: ਬਾਝਹੁ
+        type: exact
+    category: negation
+    tradition: null
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Without — negation for co-occurrence with ritual/practice terms"
+
+  # -------------------------------------------------------------------------
+  # Temporal / cosmological
+  # -------------------------------------------------------------------------
+
+  - id: JUG
+    canonical_form: ਜੁਗ
+    aliases:
+      - form: ਜੁਗ
+        type: exact
+      - form: ਜੁਗਿ
+        type: exact
+      - form: ਜੁਗੁ
+        type: exact
+      - form: ਜੁਗਹ
+        type: exact
+    category: temporal
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Age/epoch — cosmological time divisions"
+
+  - id: KALIJUG
+    canonical_form: ਕਲਿਜੁਗ
+    aliases:
+      - form: ਕਲਿਜੁਗ
+        type: exact
+      - form: ਕਲਿਜੁਗਿ
+        type: exact
+      - form: ਕਲਜੁਗ
+        type: exact
+    category: temporal
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Dark Age — current cosmic epoch in Hindu cosmology"

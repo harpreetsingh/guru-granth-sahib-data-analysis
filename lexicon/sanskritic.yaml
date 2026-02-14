@@ -1,0 +1,282 @@
+# ============================================================================
+# Sanskritic Register Lexicon — sanskritic.yaml
+# ============================================================================
+# Terms from the Sanskritic lexical register used in the Guru Granth Sahib.
+# These include Vedantic philosophical terminology, Brahmanical ritual
+# vocabulary, and Sanskrit-derived theological concepts.
+#
+# Used for register density analysis (Phase 2) and cross-tradition
+# co-occurrence (Phase 2).
+#
+# Reference: PLAN.md Section 4.1, Section 5.2
+# Schema: lexicon/_schema.yaml
+# ============================================================================
+
+entities:
+  # -------------------------------------------------------------------------
+  # Vedantic philosophical concepts
+  # -------------------------------------------------------------------------
+
+  - id: BRAHM
+    canonical_form: ਬ੍ਰਹਮ
+    aliases:
+      - form: ਬ੍ਰਹਮ
+        type: exact
+      - form: ਬ੍ਰਹਮੁ
+        type: exact
+      - form: ਬ੍ਰਹਮਿ
+        type: exact
+    category: concept
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Brahman — ultimate reality in Vedantic philosophy"
+
+  - id: ATMA
+    canonical_form: ਆਤਮਾ
+    aliases:
+      - form: ਆਤਮਾ
+        type: exact
+      - form: ਆਤਮ
+        type: exact
+      - form: ਆਤਮੁ
+        type: exact
+    category: concept
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Soul/Self — individual consciousness"
+
+  - id: MUKTI
+    canonical_form: ਮੁਕਤਿ
+    aliases:
+      - form: ਮੁਕਤਿ
+        type: exact
+      - form: ਮੁਕਤ
+        type: exact
+      - form: ਮੁਕਤੁ
+        type: exact
+    category: concept
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Liberation — release from the cycle of rebirth"
+
+  - id: MAYA
+    canonical_form: ਮਾਇਆ
+    aliases:
+      - form: ਮਾਇਆ
+        type: exact
+      - form: ਮਾਇਆਧਾਰੀ
+        type: exact
+    category: concept
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Illusion/Material attachment — cosmic delusion"
+
+  - id: KARAM
+    canonical_form: ਕਰਮ
+    aliases:
+      - form: ਕਰਮ
+        type: exact
+      - form: ਕਰਮਿ
+        type: exact
+      - form: ਕਰਮੁ
+        type: exact
+      - form: ਕਰਮੀ
+        type: exact
+    category: concept
+    tradition: vedantic
+    register: sanskritic
+    polysemous: true
+    added_version: "1.0.0"
+    notes: "Actions/deeds/karma. Polysemous: can mean ritual action or divine grace."
+
+  - id: DHARAM
+    canonical_form: ਧਰਮ
+    aliases:
+      - form: ਧਰਮ
+        type: exact
+      - form: ਧਰਮੁ
+        type: exact
+      - form: ਧਰਮਿ
+        type: exact
+    category: concept
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Righteousness/duty — cosmic order"
+
+  - id: GIAN
+    canonical_form: ਗਿਆਨ
+    aliases:
+      - form: ਗਿਆਨ
+        type: exact
+      - form: ਗਿਆਨਿ
+        type: exact
+      - form: ਗਿਆਨੁ
+        type: exact
+      - form: ਗਿਆਨੀ
+        type: exact
+    category: concept
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Spiritual knowledge/wisdom"
+
+  # -------------------------------------------------------------------------
+  # Sanskritic ritual/practice terms
+  # -------------------------------------------------------------------------
+
+  - id: TEERATH
+    canonical_form: ਤੀਰਥ
+    aliases:
+      - form: ਤੀਰਥ
+        type: exact
+      - form: ਤੀਰਥਿ
+        type: exact
+      - form: ਤੀਰਥੁ
+        type: exact
+    category: practice
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Pilgrimage — ritual practice, often critiqued"
+
+  - id: JAP
+    canonical_form: ਜਪ
+    aliases:
+      - form: ਜਪ
+        type: exact
+      - form: ਜਪੁ
+        type: exact
+      - form: ਜਪਿ
+        type: exact
+    category: practice
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Meditative repetition — chanting divine name"
+
+  - id: POOJA
+    canonical_form: ਪੂਜਾ
+    aliases:
+      - form: ਪੂਜਾ
+        type: exact
+      - form: ਪੂਜ
+        type: exact
+    category: practice
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Worship/ritual offering — formal devotional practice"
+
+  - id: HAVAN
+    canonical_form: ਹਵਨ
+    aliases:
+      - form: ਹਵਨ
+        type: exact
+      - form: ਹੋਮ
+        type: exact
+    category: practice
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Fire ritual — Vedic sacrificial practice"
+
+  - id: BARAT
+    canonical_form: ਬ੍ਰਤ
+    aliases:
+      - form: ਬ੍ਰਤ
+        type: exact
+      - form: ਬ੍ਰਤੁ
+        type: exact
+    category: practice
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Fasting vow — ritual practice"
+
+  # -------------------------------------------------------------------------
+  # Sanskritic register markers (clerical)
+  # -------------------------------------------------------------------------
+
+  - id: PANDIT
+    canonical_form: ਪੰਡਿਤ
+    aliases:
+      - form: ਪੰਡਿਤ
+        type: exact
+      - form: ਪੰਡਿਤੁ
+        type: exact
+      - form: ਪੰਡਿਤਾ
+        type: exact
+    category: marker
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Brahmin scholar — often referenced in critique-of-clerics"
+
+  - id: JOGI
+    canonical_form: ਜੋਗੀ
+    aliases:
+      - form: ਜੋਗੀ
+        type: exact
+      - form: ਜੋਗ
+        type: exact
+      - form: ਜੋਗੁ
+        type: exact
+      - form: ਜੋਗਿ
+        type: exact
+    category: marker
+    tradition: yogic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Yogi/practitioner of yoga — often referenced in critique context"
+
+  # -------------------------------------------------------------------------
+  # Places (Sanskritic register)
+  # -------------------------------------------------------------------------
+
+  - id: KASHI
+    canonical_form: ਕਾਸ਼ੀ
+    aliases:
+      - form: ਕਾਸੀ
+        type: exact
+      - form: ਕਾਸ਼ੀ
+        type: exact
+    category: place
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Varanasi/Benares — holy city for Hindus"
+
+  - id: BANARAS
+    canonical_form: ਬਨਾਰਸ
+    aliases:
+      - form: ਬਨਾਰਸ
+        type: exact
+      - form: ਬਨਾਰਸਿ
+        type: exact
+      - form: ਬਨਾਰਸੀ
+        type: exact
+    category: place
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Banaras — alternate name for Varanasi"

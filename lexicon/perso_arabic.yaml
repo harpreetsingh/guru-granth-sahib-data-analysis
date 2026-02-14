@@ -1,0 +1,216 @@
+# ============================================================================
+# Perso-Arabic Register Lexicon — perso_arabic.yaml
+# ============================================================================
+# Terms from the Perso-Arabic lexical register used in the Guru Granth Sahib.
+# These include Islamic/Sufi terminology, Persian loanwords, and Arabic
+# theological vocabulary employed by the Bhagats and Gurus.
+#
+# Used for register density analysis (Phase 2) and cross-tradition
+# co-occurrence (Phase 2).
+#
+# Reference: PLAN.md Section 4.1, Section 5.2
+# Schema: lexicon/_schema.yaml
+# ============================================================================
+
+entities:
+  # -------------------------------------------------------------------------
+  # Islamic/Sufi divine references
+  # -------------------------------------------------------------------------
+
+  - id: RABB
+    canonical_form: ਰੱਬ
+    aliases:
+      - form: ਰਬ
+        type: exact
+      - form: ਰੱਬ
+        type: exact
+      - form: ਰਬੁ
+        type: exact
+    category: divine_name
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Lord — Arabic term for God"
+
+  - id: MAULA
+    canonical_form: ਮਉਲਾ
+    aliases:
+      - form: ਮਉਲਾ
+        type: exact
+      - form: ਮੌਲਾ
+        type: exact
+    category: divine_name
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Master/Protector — Arabic title for God in Sufi usage"
+
+  # -------------------------------------------------------------------------
+  # Islamic practices and concepts (markers)
+  # -------------------------------------------------------------------------
+
+  - id: NAMAZ
+    canonical_form: ਨਮਾਜ
+    aliases:
+      - form: ਨਮਾਜ
+        type: exact
+      - form: ਨਮਾਜਿ
+        type: exact
+      - form: ਨਿਮਾਜ
+        type: exact
+    category: practice
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Islamic prayer ritual — often referenced in critique-of-ritual context"
+
+  - id: ROZA
+    canonical_form: ਰੋਜਾ
+    aliases:
+      - form: ਰੋਜਾ
+        type: exact
+      - form: ਰੋਜੇ
+        type: exact
+    category: practice
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Islamic fasting — referenced in ritual context"
+
+  - id: HAJI
+    canonical_form: ਹਾਜੀ
+    aliases:
+      - form: ਹਾਜੀ
+        type: exact
+      - form: ਹਜ
+        type: exact
+      - form: ਹਜਿ
+        type: exact
+    category: practice
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Pilgrimage to Mecca / one who has made the pilgrimage"
+
+  # -------------------------------------------------------------------------
+  # Sufi concepts
+  # -------------------------------------------------------------------------
+
+  - id: MURSHID
+    canonical_form: ਮੁਰਸ਼ਿਦ
+    aliases:
+      - form: ਮੁਰਸ਼ਿਦ
+        type: exact
+      - form: ਮੁਰਸ਼ਿਦੁ
+        type: exact
+    category: concept
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Sufi spiritual guide/master"
+
+  - id: MURID
+    canonical_form: ਮੁਰੀਦ
+    aliases:
+      - form: ਮੁਰੀਦ
+        type: exact
+      - form: ਮੁਰੀਦੁ
+        type: exact
+    category: concept
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Sufi disciple/seeker"
+
+  - id: FAQIR
+    canonical_form: ਫਕੀਰ
+    aliases:
+      - form: ਫਕੀਰ
+        type: exact
+      - form: ਫਕੀਰੁ
+        type: exact
+      - form: ਫਕੀਰਿ
+        type: exact
+    category: concept
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Holy mendicant — Sufi/Islamic spiritual seeker"
+
+  - id: DARVESH
+    canonical_form: ਦਰਵੇਸ਼
+    aliases:
+      - form: ਦਰਵੇਸ
+        type: exact
+      - form: ਦਰਵੇਸੁ
+        type: exact
+    category: concept
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Dervish — wandering Sufi ascetic"
+
+  # -------------------------------------------------------------------------
+  # Perso-Arabic register markers (clerical)
+  # -------------------------------------------------------------------------
+
+  - id: QAZI
+    canonical_form: ਕਾਜੀ
+    aliases:
+      - form: ਕਾਜੀ
+        type: exact
+      - form: ਕਾਜੀਆ
+        type: exact
+    category: marker
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Islamic judge — often referenced in critique-of-clerics context"
+
+  - id: MULLAH
+    canonical_form: ਮੁੱਲਾ
+    aliases:
+      - form: ਮੁਲਾ
+        type: exact
+      - form: ਮੁੱਲਾ
+        type: exact
+      - form: ਮੁੱਲਾਂ
+        type: exact
+      - form: ਮੌਲਵੀ
+        type: exact
+    category: marker
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Islamic cleric — often referenced in critique-of-clerics"
+
+  # -------------------------------------------------------------------------
+  # Places (Perso-Arabic register)
+  # -------------------------------------------------------------------------
+
+  - id: MAKKA
+    canonical_form: ਮੱਕਾ
+    aliases:
+      - form: ਮਕੇ
+        type: exact
+      - form: ਮੱਕੇ
+        type: exact
+      - form: ਮੱਕਾ
+        type: exact
+    category: place
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Mecca — holy city, referenced in pilgrimage context"

@@ -1,0 +1,228 @@
+# ============================================================================
+# Nirgun Lexicon — nirgun.yaml
+# ============================================================================
+# Nirgun (formless) divine names and concepts. These entities describe the
+# divine without attributes, form, or qualities — the apophatic theology
+# of the Guru Granth Sahib.
+#
+# Key for Phase 3 nirgun/sagun analysis: high nirgun_density in a line
+# or shabad indicates nirgun-leaning theology.
+#
+# Reference: PLAN.md Section 4.1, Section 6.1
+# Schema: lexicon/_schema.yaml
+# ============================================================================
+
+entities:
+  # -------------------------------------------------------------------------
+  # Formless divine epithets
+  # -------------------------------------------------------------------------
+
+  - id: NIRANKAR
+    canonical_form: ਨਿਰੰਕਾਰ
+    aliases:
+      - form: ਨਿਰੰਕਾਰ
+        type: exact
+      - form: ਨਿਰੰਕਾਰੁ
+        type: exact
+      - form: ਨਿਰੰਕਾਰਿ
+        type: exact
+    category: divine_name
+    tradition: sikh
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "The Formless One — key nirgun epithet"
+
+  - id: AKAL
+    canonical_form: ਅਕਾਲ
+    aliases:
+      - form: ਅਕਾਲ
+        type: exact
+      - form: ਅਕਾਲੁ
+        type: exact
+    category: divine_name
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "The Timeless One — beyond time and death"
+
+  - id: ALAKH
+    canonical_form: ਅਲਖ
+    aliases:
+      - form: ਅਲਖ
+        type: exact
+      - form: ਅਲਖੁ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "The Unseen/Imperceptible — nirgun attribute"
+
+  - id: AGAM
+    canonical_form: ਅਗਮ
+    aliases:
+      - form: ਅਗਮ
+        type: exact
+      - form: ਅਗਮੁ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "The Inaccessible/Unfathomable"
+
+  - id: NIRANJAN
+    canonical_form: ਨਿਰੰਜਨੁ
+    aliases:
+      - form: ਨਿਰੰਜਨੁ
+        type: exact
+      - form: ਨਿਰੰਜਨ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "The Immaculate One — beyond worldly taint"
+
+  - id: NIRBHAU
+    canonical_form: ਨਿਰਭਉ
+    aliases:
+      - form: ਨਿਰਭਉ
+        type: exact
+      - form: ਨਿਰਭਉਂ
+        type: exact
+    category: divine_name
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Without Fear — from the Mool Mantar"
+
+  - id: NIRVAIR
+    canonical_form: ਨਿਰਵੈਰੁ
+    aliases:
+      - form: ਨਿਰਵੈਰੁ
+        type: exact
+      - form: ਨਿਰਵੈਰ
+        type: exact
+    category: divine_name
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Without Enmity — from the Mool Mantar"
+
+  - id: AJOONI
+    canonical_form: ਅਜੂਨੀ
+    aliases:
+      - form: ਅਜੂਨੀ
+        type: exact
+    category: divine_name
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Beyond birth/death cycle — from the Mool Mantar"
+
+  - id: ABINAASI
+    canonical_form: ਅਬਿਨਾਸੀ
+    aliases:
+      - form: ਅਬਿਨਾਸੀ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Imperishable/Indestructible"
+
+  # -------------------------------------------------------------------------
+  # Nirgun theological concepts
+  # -------------------------------------------------------------------------
+
+  - id: SABAD
+    canonical_form: ਸਬਦ
+    aliases:
+      - form: ਸਬਦ
+        type: exact
+      - form: ਸਬਦੁ
+        type: exact
+      - form: ਸਬਦਿ
+        type: exact
+      - form: ਸਬਦੈ
+        type: exact
+    category: concept
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "The Word/Divine Sound — vehicle of revelation in Sikh theology"
+
+  - id: SUNN
+    canonical_form: ਸੁੰਨ
+    aliases:
+      - form: ਸੁੰਨ
+        type: exact
+      - form: ਸੁਨ
+        type: exact
+      - form: ਸੁੰਨੁ
+        type: exact
+    category: concept
+    tradition: yogic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Void/Primordial Silence — state before creation"
+
+  - id: SAHAJ
+    canonical_form: ਸਹਜ
+    aliases:
+      - form: ਸਹਜ
+        type: exact
+      - form: ਸਹਜਿ
+        type: exact
+      - form: ਸਹਜੁ
+        type: exact
+      - form: ਸਹਜੇ
+        type: exact
+    category: concept
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Natural/Effortless state — spiritual equipoise"
+
+  - id: NIRAGUN
+    canonical_form: ਨਿਰਗੁਣ
+    aliases:
+      - form: ਨਿਰਗੁਣ
+        type: exact
+      - form: ਨਿਰਗੁਣੁ
+        type: exact
+      - form: ਨਿਰਗੁਣਿ
+        type: exact
+    category: concept
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Without qualities/attributes — the nirgun aspect of the divine"
+
+  - id: ANHAD
+    canonical_form: ਅਨਹਦ
+    aliases:
+      - form: ਅਨਹਦ
+        type: exact
+      - form: ਅਨਹਦੁ
+        type: exact
+    category: concept
+    tradition: yogic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Unstruck Sound — the celestial music heard in deep meditation"

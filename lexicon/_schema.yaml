@@ -1,0 +1,150 @@
+# ============================================================================
+# Lexicon Entry Schema — _schema.yaml
+# ============================================================================
+# Single source of truth for what constitutes a valid lexicon entry.
+# All lexicon YAML files (entities.yaml, nirgun.yaml, etc.) must conform
+# to this schema.  The linter (lint.py) validates against it.
+#
+# Reference: PLAN.md Section 4.1
+# ============================================================================
+
+schema_version: "1.0.0"
+
+# ---------------------------------------------------------------------------
+# Entity entry schema
+# ---------------------------------------------------------------------------
+entity:
+  required:
+    id:
+      type: string
+      pattern: "^[A-Z][A-Z0-9_]+$"     # UPPER_SNAKE_CASE, globally unique
+      description: >
+        Unique identifier for the entity.  Must be UPPER_SNAKE_CASE.
+        Must be globally unique across ALL lexicon files.
+
+    canonical_form:
+      type: string
+      description: >
+        Canonical Gurmukhi Unicode form of the entity.
+        This is the "display" form used in reports and concordances.
+
+    aliases:
+      type: list
+      min_items: 1
+      description: >
+        List of surface forms the matcher should look for.
+        Each alias must have a form and a match type.
+      items:
+        required:
+          form:
+            type: string
+            description: >
+              Gurmukhi Unicode surface form to match.
+          type:
+            type: enum
+            values: [exact, prefix, suffix]
+            description: >
+              Match type:
+                exact  — full token match only
+                prefix — matches tokens starting with this form
+                suffix — matches tokens ending with this form
+
+    category:
+      type: enum
+      values:
+        - divine_name         # Names/epithets for the divine (ਅੱਲਾਹ, ਰਾਮ, ਹਰਿ)
+        - concept             # Abstract theological/philosophical terms (ਹੁਕਮ, ਨਾਮ)
+        - marker              # Register/style indicator (Perso-Arabic or Sanskritic term)
+        - narrative           # Proper nouns from stories/examples (ਧ੍ਰੂ, ਪ੍ਰਹਿਲਾਦ)
+        - place               # Geographic references (ਕਾਸ਼ੀ, ਮੱਕਾ)
+        - practice            # Ritual/worship practices (ਤੀਰਥ, ਜਪ, ਪੂਜਾ)
+        - negation            # Negation words for co-occurrence analysis (ਨਾ, ਬਿਨੁ)
+        - temporal            # Cosmological/time terms (ਜੁਗ, ਕਲਿਜੁਗ)
+      description: >
+        Functional category of the entity.  Controls how the entity
+        is used in feature computation and tagging.
+
+  optional:
+    tradition:
+      type: enum
+      nullable: true
+      values:
+        - islamic             # Perso-Arabic / Sufi tradition
+        - vedantic            # Vedanta / Brahmanical tradition
+        - vaishnava           # Vaishnava bhakti (Ram/Krishna devotion)
+        - yogic               # Nath/Yoga tradition (Gorakh, Nath, Jog)
+        - bhakti              # Sant/bhakti tradition (Kabir, Namdev, Ravidas)
+        - universal           # Not specific to any tradition
+        - sikh                # Distinctly Sikh terminology
+      description: >
+        Religious/philosophical tradition this entity is associated with.
+        null if tradition is not applicable.
+
+    register:
+      type: enum
+      values:
+        - perso_arabic        # Perso-Arabic lexical register
+        - sanskritic          # Sanskritic lexical register
+        - mixed               # Mixed register
+        - neutral             # Register-neutral
+      description: >
+        Lexical register classification.  Used for register density
+        analysis (Phase 2).
+
+    notes:
+      type: string
+      description: >
+        Free-text scholarly notes about this entity.  Not used in
+        analysis — for human reference only.
+
+    polysemous:
+      type: boolean
+      default: false
+      description: >
+        Whether this entity's surface forms have multiple possible
+        meanings.  If true, matches are flagged for disambiguation
+        and the polysemy registry (polysemy.yaml) must have a
+        corresponding entry.
+
+    added_version:
+      type: string
+      pattern: "^\\d+\\.\\d+\\.\\d+$"   # semver
+      description: >
+        Version when this entity was added to the lexicon.
+        Enables tracking of lexicon growth over time.
+
+# ---------------------------------------------------------------------------
+# Validation rules (enforced by lint.py)
+# ---------------------------------------------------------------------------
+validation:
+  - rule: unique_ids
+    description: >
+      Entity IDs must be globally unique across ALL lexicon files.
+      No entity_id may appear in more than one file.
+
+  - rule: unique_aliases
+    description: >
+      No two entities may share the same alias form within the same
+      match type.  If two entities share a surface form, they must
+      be registered in polysemy.yaml.
+
+  - rule: alias_normalization
+    description: >
+      Every alias form must produce a valid Gurmukhi string after
+      normalization.  Aliases containing non-Gurmukhi characters
+      (except standard punctuation) are rejected.
+
+  - rule: controlled_vocabulary
+    description: >
+      Category, tradition, and register values must be from the
+      controlled vocabularies defined above.
+
+  - rule: polysemy_consistency
+    description: >
+      If polysemous is true, polysemy.yaml must contain an entry
+      mapping at least one alias form to this entity_id.
+
+  - rule: canonical_form_in_aliases
+    description: >
+      The canonical_form should appear as one of the aliases
+      (typically as exact match).  This is a warning, not an error.

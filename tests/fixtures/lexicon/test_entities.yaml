@@ -1,0 +1,81 @@
+# Test lexicon — small set of known entities for fixture-based testing.
+# These entities appear in Angs 1-5 (Japji Sahib) fixture HTML.
+
+entities:
+  - id: SATNAM
+    canonical_form: ਸਤਿ ਨਾਮੁ
+    aliases:
+      - form: ਸਤਿ ਨਾਮੁ
+        type: exact
+    category: concept
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "True Name — fundamental concept in Sikh theology"
+
+  - id: NAAM
+    canonical_form: ਨਾਮੁ
+    aliases:
+      - form: ਨਾਮੁ
+        type: exact
+      - form: ਨਾਮ
+        type: exact
+      - form: ਨਾਉ
+        type: exact
+      - form: ਨਾਇ
+        type: exact
+    category: concept
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "The Name — divine identity, central Sikh concept"
+
+  - id: HUKAM
+    canonical_form: ਹੁਕਮੁ
+    aliases:
+      - form: ਹੁਕਮੁ
+        type: exact
+      - form: ਹੁਕਮਿ
+        type: exact
+      - form: ਹੁਕਮੀ
+        type: exact
+      - form: ਹੁਕਮੈ
+        type: exact
+    category: concept
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Divine Will/Order — key concept in Japji Sahib"
+
+  - id: TEERATH
+    canonical_form: ਤੀਰਥ
+    aliases:
+      - form: ਤੀਰਥਿ
+        type: exact
+      - form: ਤੀਰਥੁ
+        type: exact
+      - form: ਤੀਰਥ
+        type: exact
+    category: practice
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Pilgrimage — ritual practice referenced in Japji Sahib"
+
+  - id: NIRANJAN
+    canonical_form: ਨਿਰੰਜਨੁ
+    aliases:
+      - form: ਨਿਰੰਜਨੁ
+        type: exact
+      - form: ਨਿਰੰਜਨ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "The Immaculate One — nirgun epithet"

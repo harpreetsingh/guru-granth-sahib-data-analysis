@@ -1,0 +1,178 @@
+# ============================================================================
+# Sagun Narrative Lexicon — sagun_narrative.yaml
+# ============================================================================
+# Sagun (formed/attributed) narrative references. These entities are proper
+# nouns from mythological stories, avatars, and historical figures used in
+# the Guru Granth Sahib as illustrative examples or devotional references.
+#
+# Key for Phase 3 nirgun/sagun analysis: high sagun_density in a line
+# indicates narrative/illustrative theology.
+#
+# Reference: PLAN.md Section 4.1, Section 6.1
+# Schema: lexicon/_schema.yaml
+# ============================================================================
+
+entities:
+  # -------------------------------------------------------------------------
+  # Vaishnava narrative figures
+  # -------------------------------------------------------------------------
+
+  - id: KRISHNA
+    canonical_form: ਕ੍ਰਿਸ਼ਨ
+    aliases:
+      - form: ਕ੍ਰਿਸ਼ਨ
+        type: exact
+      - form: ਕਾਨ੍ਹ
+        type: exact
+      - form: ਕਾਨ੍ਹਾ
+        type: exact
+      - form: ਕਾਨ੍ਹੁ
+        type: exact
+      - form: ਮੁਰਾਰਿ
+        type: exact
+      - form: ਮਾਧੋ
+        type: exact
+      - form: ਮਾਧਵ
+        type: exact
+      - form: ਕੇਸਵ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Krishna and his epithets — used in devotional narrative context"
+
+  - id: RAMCHANDRA
+    canonical_form: ਰਾਮਚੰਦ
+    aliases:
+      - form: ਰਾਮਚੰਦ
+        type: exact
+      - form: ਰਾਮਚੰਦਿ
+        type: exact
+      - form: ਰਘੁਨਾਥ
+        type: exact
+      - form: ਰਘੁਨਾਥੁ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Ramchandra — avatar of Vishnu, distinct from RAM (divine name)"
+
+  - id: SHIV
+    canonical_form: ਸ਼ਿਵ
+    aliases:
+      - form: ਸਿਵ
+        type: exact
+      - form: ਸ਼ਿਵ
+        type: exact
+      - form: ਸੰਕਰ
+        type: exact
+      - form: ਸੰਕਰੁ
+        type: exact
+      - form: ਮਹਾਦੇਉ
+        type: exact
+      - form: ਮਹੇਸ
+        type: exact
+    category: narrative
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Shiva and epithets — used in narrative/illustrative contexts"
+
+  - id: BRAHMA
+    canonical_form: ਬ੍ਰਹਮਾ
+    aliases:
+      - form: ਬ੍ਰਹਮਾ
+        type: exact
+      - form: ਬ੍ਰਹਮਾਂ
+        type: exact
+    category: narrative
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Creator deity — used in narrative/comparative contexts"
+
+  # -------------------------------------------------------------------------
+  # Devotees / exemplars from narrative
+  # -------------------------------------------------------------------------
+
+  - id: DHRU
+    canonical_form: ਧ੍ਰੂ
+    aliases:
+      - form: ਧ੍ਰੂ
+        type: exact
+      - form: ਧ੍ਰੂਅ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Dhruv — child devotee who attained the Pole Star through devotion"
+
+  - id: PRAHLAD
+    canonical_form: ਪ੍ਰਹਿਲਾਦ
+    aliases:
+      - form: ਪ੍ਰਹਿਲਾਦ
+        type: exact
+      - form: ਪ੍ਰਹਿਲਾਦੁ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Prahlad — devotee saved by Narsingh avatar"
+
+  - id: NARAD
+    canonical_form: ਨਾਰਦ
+    aliases:
+      - form: ਨਾਰਦ
+        type: exact
+      - form: ਨਾਰਦੁ
+        type: exact
+      - form: ਨਾਰਦਿ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Narad — celestial sage and devotee"
+
+  - id: HANUMAN
+    canonical_form: ਹਨੂਮਾਨ
+    aliases:
+      - form: ਹਨੂਮਾਨ
+        type: exact
+      - form: ਹਨੂਮਾਨੁ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "Hanuman — devotee of Ram in Ramayana narrative"
+
+  # -------------------------------------------------------------------------
+  # Sagun concept
+  # -------------------------------------------------------------------------
+
+  - id: SARGUN
+    canonical_form: ਸਰਗੁਣ
+    aliases:
+      - form: ਸਰਗੁਣ
+        type: exact
+      - form: ਸਗੁਣ
+        type: exact
+    category: concept
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "1.0.0"
+    notes: "With qualities/attributes — the sagun aspect of the divine"
