@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+.venv/
+
+# uv
+uv.lock
+
+# Pipeline artifacts (large, regenerable)
+data/raw_html/
+data/corpus/
+data/derived/
+data/reports/
+data/web_bundle/
+data/gold/
+.cache/
+
+# bv (beads viewer) local config and caches
+.bv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
