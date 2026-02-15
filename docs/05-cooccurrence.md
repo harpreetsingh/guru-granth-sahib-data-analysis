@@ -11,10 +11,15 @@ whether a pair co-occurs more than expected by chance.
 - **1,430 angs** analyzed as co-occurrence units
 - **2,687 entity pairs** with co-occurrence count >= 5
 
-## Top Entity Pairs by PMI
+## Top Entity Pairs by PMI (Surprising Associations)
 
-High PMI indicates that these pairs appear together far more often than their
-individual frequencies would predict.
+**PMI (Pointwise Mutual Information)** measures *surprise* -- how much more
+often two entities co-occur than their individual frequencies would predict.
+High PMI pairs are the *unexpected* associations: rare entities that
+nevertheless appear together with unusual regularity. PMI corrects for base
+rate, so common entities like HARI and NAAM (which co-occur everywhere simply
+because both are frequent) score lower than rare-but-tightly-linked pairs
+like HINDU-TURK.
 
 | Entity 1 | Entity 2 | PMI | Co-occur Count |
 |----------|----------|-----|----------------|
@@ -49,10 +54,13 @@ individual frequencies would predict.
 | BRAHMA | QAZI | 2.700 | 5 |
 | PURAN | SHASTAR | 2.595 | 11 |
 
-## Top Entity Pairs by Frequency
+## Top Entity Pairs by Frequency (The Everyday Vocabulary)
 
-These are the most commonly co-occurring pairs regardless of statistical
-significance.
+**Frequency** counts raw co-occurrence -- how many angs contain both entities.
+Unlike PMI, frequency is dominated by common entities. These pairs appear
+together constantly because both entities are individually very frequent. They
+represent the *backbone* of the GGS's theological vocabulary rather than
+surprising associations.
 
 | Entity 1 | Entity 2 | Co-occur Count |
 |----------|----------|----------------|
@@ -84,7 +92,7 @@ identity as a paired concept, typically in lines that assert the transcendence
 of both categories. The GGS does not critique one community without addressing
 both.
 
-### The Mool Mantar Cluster
+### The Mool Mantar (The Core Mantra) Cluster
 
 The Mool Mantar attributes form a tight co-occurrence cluster: AJOONI, AKAL,
 SATNAM, NIRVAIR, NIRBHAU, and MOORAT (PMI 2.7-5.0). These are the attributes
@@ -110,12 +118,13 @@ one scripture (Vedas, Puranas, Shastras, Smritis), it tends to list multiple
 scriptures together -- typically in compositions that either survey or
 critique textual authority.
 
-### The Mythological Cluster
+### The Brahma/Vishnu/Shiva Trinity Cluster
 
 BISN-BRAHMA (PMI 4.397), BISN-SHIV (2.971), INDR-SHIV (2.879) confirm that
-Hindu mythological figures appear as constellations, not individually. The
-Trimurti (Brahma-Vishnu-Shiv) co-occurs strongly, typically in compositions
-that assert the divine is beyond these forms.
+the Hindu Trinity (Brahma the Creator, Vishnu the Preserver, Shiva the
+Destroyer) appears as a constellation, not individually. When the GGS mentions
+one member of the Trinity, it tends to mention the others -- typically in
+compositions that assert the formless divine is beyond all three forms.
 
 ### The Bridal Mysticism Cluster (New Finding)
 

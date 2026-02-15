@@ -2,6 +2,27 @@
 
 [Back to Table of Contents](./ANALYSIS_RESULTS.md)
 
+## The Three Pillars of the GGS
+
+The data reveals three dominant modes of discourse that together define the
+character of the Guru Granth Sahib:
+
+1. **Nirgun theology (42.25%)** -- The formless divine, Naam, Sabad, Guru.
+   Nearly half the text is explicitly about a God who has no form, no image,
+   no incarnation.
+2. **Sanskritic philosophy (30.21%)** -- Deep engagement with Vedantic concepts
+   (Maya, Brahm, Atma, Karam, Mukti). The Gurus did not reject Vedantic
+   philosophy -- they engaged with it deeply and recontextualized it within
+   a nirgun framework.
+3. **Devotional-ethical practice (12.7%)** -- Love/longing/surrender (7.24%)
+   combined with inner moral struggle (5.46%). The GGS is simultaneously a
+   philosophical treatise *and* a collection of love songs, grounded in
+   ethical self-discipline.
+
+Together these three pillars account for **85.2%** of the GGS's theological
+vocabulary. Ritual critique, interfaith engagement, and mythological narrative
+serve as important but quantitatively minor registers.
+
 ## Eleven-Dimensional Register Analysis
 
 Each line in the corpus is scored across eleven feature dimensions based on the
@@ -81,14 +102,9 @@ identity density. The GGS is, quantitatively, overwhelmingly a nirgun text
 that draws heavily on Sanskritic philosophical vocabulary, with significant
 devotional and ethical dimensions.
 
-## The Three Pillars
+## Summary
 
-The data reveals three dominant modes of discourse in the GGS:
-
-1. **Nirgun theology (42.25%)** -- The formless divine, Naam, Sabad, Guru
-2. **Sanskritic philosophy (30.21%)** -- Vedantic engagement, Maya, Brahm, Mukti
-3. **Devotional-ethical practice (12.7%)** -- Love/longing + inner moral struggle
-
-Together these three pillars account for the vast majority of the GGS's
-theological vocabulary, with ritual critique, interfaith engagement, and
-mythological narrative serving as important but quantitatively minor registers.
+The Three Pillars framework (detailed at the top of this page) is the key
+takeaway: nirgun theology (42.25%), Sanskritic philosophy (30.21%), and
+devotional-ethical practice (12.7%) account for 85.2% of the GGS's theological
+vocabulary.

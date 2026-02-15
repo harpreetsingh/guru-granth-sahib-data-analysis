@@ -15,6 +15,7 @@ Guru Granth Sahib (1,430 angs, 60,629 lines, 396,036 tokens).
 8. [Per-Author Analysis](./08-authors.md) -- Lexical profiles of all 18 authors
 9. [Semantic Analysis](./09-semantic.md) -- RAM behavior, ALLAH context, cross-tradition fusion, civilizational density
 10. [Key Findings](./10-findings.md) -- Summary of what the data tells us
+- [Glossary](./glossary.md) -- Key terms for readers unfamiliar with Sikh scripture
 
 ## Method
 

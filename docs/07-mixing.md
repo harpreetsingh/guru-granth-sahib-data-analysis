@@ -2,6 +2,25 @@
 
 [Back to Table of Contents](./ANALYSIS_RESULTS.md)
 
+## The Nirgun/Sagun Play: Using Narrative to Illustrate Formless Truth
+
+The most important structural finding in the mixing analysis: **sagun
+(incarnation) references almost never stand alone.** When the Gurus mention
+Krishna, Shiv, Brahma, Sita, or Ravan, they typically do so in the context
+of nirgun teaching -- mythology serves as *illustration of formless truth*
+rather than as standalone devotion to a particular deity.
+
+- Nirgun lines outnumber sagun lines **112:1**
+- When sagun narrative does appear (311 lines), **27% of those lines also
+  contain nirgun vocabulary** (83 co-occurring lines)
+- The complete Ramayana cast (Sita, Dasrath, Ravan, Lachman, Hanuman)
+  appears in only ~72 lines combined
+
+This is the GGS's distinctive rhetorical strategy: mythological figures are
+invoked not as objects of worship but as teaching devices. "Even Brahma, Vishnu,
+and Shiva do not know the divine" is a characteristic nirgun argument that
+*uses* sagun vocabulary to *assert* nirgun theology.
+
 ## Perso-Arabic / Sanskritic Register Overlap
 
 | Category | Lines |
