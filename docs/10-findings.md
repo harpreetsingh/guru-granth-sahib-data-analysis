@@ -8,6 +8,28 @@ This computational analysis of the entire Guru Granth Sahib (60,629 lines,
 396,036 tokens) using a 124-entity theological lexicon across 11 feature
 dimensions produces the following quantitative findings.
 
+## The Three Pillars (Headline Finding)
+
+The data reveals three dominant modes of discourse that together account for
+**85.2%** of the GGS's theological vocabulary:
+
+| Pillar | Register(s) | % of Lines |
+|--------|------------|------------|
+| Nirgun theology | nirgun | 42.25% |
+| Sanskritic philosophy | sanskritic | 30.21% |
+| Devotional-ethical practice | devotional + ethical | 12.70% |
+
+```
+Nirgun theology:          42.25%  ████████████████████████████████████████████
+Sanskritic philosophy:    30.21%  ██████████████████████████████
+Devotional-ethical:       12.70%  ████████████▋
+Everything else:          14.84%  ██████████████▊
+```
+
+Everything else -- ritual critique, interfaith engagement, mythological
+narrative, identity labeling -- occupies the remaining 14.8%. This framing
+structures all subsequent findings.
+
 ## Finding 1: The GGS is quantitatively a nirgun text
 
 **42.25% of all lines** contain nirgun-register vocabulary, making it the
@@ -42,8 +64,10 @@ This supports reading the GGS as primarily an ethical-philosophical text.
 
 **7.24% of lines** contain devotional vocabulary -- bridal metaphors (Pir,
 Kant, Sohagan), love-longing (Birha, Prem), and devotional identity (Bhagat).
-This is larger than the ethical and ritual dimensions combined, confirming
-the GGS as a Bhakti text alongside its nirgun theology.
+This exceeds the ethical dimension alone (5.46%) but is slightly smaller than
+ethical and ritual combined (5.46% + 2.20% = 7.66%). Nonetheless, devotional
+vocabulary is the single largest non-theological register, confirming the GGS
+as a Bhakti text alongside its nirgun theology.
 
 ## Finding 6: Perso-Arabic vocabulary occupies 0.29% of the text
 
@@ -70,12 +94,17 @@ mean, suggesting his editorial choices shaped the overall character of the text.
 ## Finding 9: Authors have distinctive register signatures
 
 Each author gravitates toward different dimensions:
-- **Guru Ram Das:** Highest nirgun (62.27%) and sanskritic (48.97%)
-- **Guru Amar Das:** Highest ethical (7.31%)
-- **Guru Tegh Bahadur:** Highest devotional (11.40%) and ritual (6.28%)
-- **Kabir:** Highest identity (0.55%) and cross-tradition engagement
-- **Farid:** Highest perso_arabic (5.70%), uniquely Sufi voice
-- **Ravidas:** Highest devotional among Bhagats (13.89%)
+
+| Author | Distinctive Register | Value |
+|--------|---------------------|-------|
+| Guru Arjan | Largest contributor, corpus-representative | 42.9% of lines |
+| Guru Nanak | Most balanced register profile | Engages all 11 dimensions |
+| Guru Ram Das | Highest nirgun and sanskritic | 62.27% / 48.97% |
+| Guru Amar Das | Highest ethical | 7.31% |
+| Guru Tegh Bahadur | Highest devotional and ritual | 11.40% / 6.28% |
+| Kabir | Highest identity, cross-tradition | 0.55% identity |
+| Farid | Highest perso_arabic, Sufi voice | 5.70% |
+| Ravidas | Highest devotional among Bhagats | 13.89% |
 
 ## Finding 10: The Mool Mantar functions as a cohesive unit
 

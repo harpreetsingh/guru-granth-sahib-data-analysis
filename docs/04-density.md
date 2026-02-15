@@ -81,15 +81,70 @@ References to religious authorities (Pandit, Qazi, Mullah, Brahmin, Siddh)
 concentrate in Raag Suhi and Ramkali, consistent with compositions that
 critique institutional religion.
 
+### Ethical Register (5.46% of lines)
+
+| Ang | Density | Raga Section |
+|-----|---------|-------------|
+| 285 | 0.0623 | Gauri (151-346) |
+| 408 | 0.0556 | Aasaa (347-488) |
+| 847 | 0.0443 | Bilawal (795-858) |
+
+Ethical vocabulary (Five Thieves, virtues) peaks in Gauri and Aasaa -- large
+raga sections with diverse compositions addressing inner moral psychology.
+
+### Devotional Register (7.24% of lines)
+
+| Ang | Density | Raga Section |
+|-----|---------|-------------|
+| 583 | 0.0811 | Vadhans (557-594) |
+| 689 | 0.0681 | Dhanasri (660-695) |
+| 561 | 0.0642 | Vadhans (557-594) |
+
+Devotional vocabulary (bridal metaphor, love-longing) concentrates in Vadhans
+and Dhanasri -- ragas associated with themes of separation and reunion.
+
+### Oneness Register (2.0% of lines)
+
+| Ang | Density | Raga Section |
+|-----|---------|-------------|
+| 144 | 0.0536 | Majh (94-150) |
+| 1385 | 0.0395 | Epilogue (1352-1430) |
+| 885 | 0.0324 | Ramkali (876-974) |
+
+Non-duality markers peak in Majh, which includes Guru Nanak's foundational
+compositions that assert divine unity.
+
+### Scriptural Register (0.49% of lines)
+
+| Ang | Density | Raga Section |
+|-----|---------|-------------|
+| 834 | 0.0179 | Bilawal (795-858) |
+| 296 | 0.0174 | Gauri (151-346) |
+| 1117 | 0.0154 | Tukhari (1107-1117) |
+
+References to external scriptures (Vedas, Shastras, Puranas, Quran) are sparse
+and distributed across multiple ragas.
+
+### Identity Register (0.05% of lines)
+
+| Ang | Density | Raga Section |
+|-----|---------|-------------|
+| 477 | 0.0206 | Aasaa (347-488) |
+| 951 | 0.0172 | Ramkali (876-974) |
+| 1136 | 0.0163 | Bhairav (1125-1167) |
+
+Explicit religious identity labels (Hindu, Musalman, Turk) are the rarest
+register. Their scattered distribution confirms that identity-naming is not
+localized to any single raga or section.
+
 ## Pattern
 
-There is a clear geographic clustering: Perso-Arabic vocabulary concentrates
+There is a clear positional clustering: Perso-Arabic vocabulary concentrates
 in Maru, cleric/ritual critique in Ramkali and Suhi, Sanskritic philosophy in
-Gauri, and nirgun devotion in Vadhans/Bihagra. This is not random -- it
-reflects the thematic character of each raga section and the compositions
-assigned to them.
+Gauri, nirgun devotion in Vadhans/Bihagra, and devotional vocabulary in
+Vadhans/Dhanasri. This is not random -- it reflects the thematic character
+of each raga section and the compositions assigned to them.
 
-The five new dimensions (ethical, devotional, oneness, scriptural, identity)
-are distributed more broadly across the corpus rather than clustering in
-specific ragas, reflecting their pervasive role in the GGS's theological
-discourse.
+The ethical, oneness, scriptural, and identity dimensions are distributed more
+broadly across the corpus rather than clustering in specific ragas, reflecting
+their pervasive role in the GGS's theological discourse.

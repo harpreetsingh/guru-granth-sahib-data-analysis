@@ -43,26 +43,40 @@ regardless of primary tag assignment.
 |--------|-------|-------------|
 | has_nirgun | 25,618 | 42.25% |
 | has_sanskritic | 18,319 | 30.21% |
+| has_devotional | 4,392 | 7.24% |
+| has_ethical | 3,311 | 5.46% |
 | has_ritual | 1,331 | 2.20% |
+| has_oneness | 1,210 | 2.00% |
 | has_cleric | 578 | 0.95% |
-| has_perso_arabic | 174 | 0.29% |
 | has_sagun_narrative | 311 | 0.51% |
+| has_scriptural | 298 | 0.49% |
+| has_perso_arabic | 174 | 0.29% |
+| has_identity | 31 | 0.05% |
 
 ## Interpretation
 
 **49.7% of lines are "unmarked"** -- they contain no entities from the original
-six register dimensions. This has dropped from 56.6% in the earlier analysis
-because the expanded 124-entity lexicon now captures ethical, devotional,
-oneness, scriptural, and identity vocabulary that was previously invisible.
+six register dimensions used in the tagging hierarchy. This has dropped from
+56.6% (70-entity lexicon) because the expanded 124-entity lexicon now captures
+ethical, devotional, oneness, scriptural, and identity vocabulary that was
+previously invisible.
+
+**Important caveat:** The tagging hierarchy only uses the original 6 dimensions
+(nirgun, sanskritic, sagun_narrative, ritual, cleric, perso_arabic). The 5 newer
+dimensions (devotional, ethical, oneness, scriptural, identity) are measured in
+the Feature Presence table above but do **not** affect primary tag assignment.
+A line with strong devotional or ethical content but no nirgun/sagun/ritual/cleric
+markers will be tagged "unmarked."
 
 **42.1% are nirgun-leaning** -- the single largest tagged category (up from
-38.1%). This confirms the GGS as primarily a nirgun text: over two-fifths of
-all lines contain vocabulary associated with the formless, attributeless divine.
+38.1% with the 70-entity lexicon). This confirms the GGS as primarily a
+nirgun text: over two-fifths of all lines contain vocabulary associated with
+the formless, attributeless divine.
 
-**5.85% are purely sanskritic** (without nirgun overlap), up from 3.35%.
-The expanded Sanskritic lexicon now captures additional scriptural references
-(Ved, Puran, Shastar, Simrit), clerical markers (Brahmin, Siddh), and
-ritual terms (Moorat, Yagya).
+**5.85% are purely sanskritic** (without nirgun overlap), up from 3.35%
+(70-entity lexicon). The expanded Sanskritic lexicon now captures additional
+scriptural references (Ved, Puran, Shastar, Simrit), clerical markers
+(Brahmin, Siddh), and ritual terms (Moorat, Yagya).
 
 **The mixed_nirgun_sagun tag (83 lines)** identifies lines where incarnation
 mythology and nirgun theology coexist -- theologically significant passages

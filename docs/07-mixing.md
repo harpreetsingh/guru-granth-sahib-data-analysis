@@ -14,7 +14,7 @@ rather than as standalone devotion to a particular deity.
 - When sagun narrative does appear (311 lines), **27% of those lines also
   contain nirgun vocabulary** (83 co-occurring lines)
 - The complete Ramayana cast (Sita, Dasrath, Ravan, Lachman, Hanuman)
-  appears in only ~72 lines combined
+  appears in only 26 lines combined
 
 This is the GGS's distinctive rhetorical strategy: mythological figures are
 invoked not as objects of worship but as teaching devices. "Even Brahma, Vishnu,
@@ -44,7 +44,7 @@ represent deliberate rhetorical choices where both traditions are
 explicitly contrasted or unified. These are the "Aval Allah Noor Upaya" type
 lines -- moments of explicit civilizational synthesis.
 
-## Nirgun / Sagun Interplay
+## Nirgun / Sagun Interplay (Detail)
 
 | Category | Lines |
 |----------|-------|
@@ -52,18 +52,17 @@ lines -- moments of explicit civilizational synthesis.
 | Sagun narrative only | 228 |
 | Both nirgun + sagun | 83 |
 
-The nirgun-sagun relationship is profoundly asymmetric:
+Only 83 lines contain both registers. When sagun narrative appears (311 total
+lines with any sagun marker), **27% of those lines (83/311) also contain nirgun
+vocabulary** -- using narrative to illustrate formless truth.
 
-- **Nirgun lines outnumber sagun lines 112:1**
-- Only 83 lines contain both registers
-- When sagun narrative appears (311 total lines with any sagun marker), 27%
-  of those lines (83/311) also contain nirgun vocabulary
+Example from Ang 339 (Raag Gauri):
 
-This confirms a well-known characteristic of the GGS: **sagun (incarnation)
-references almost never stand alone.** When the Gurus mention Krishna, Shiv,
-Brahma, Sita, or Ravan, they typically do so in the context of nirgun
-teaching -- using narrative to illustrate formless truth rather than as
-standalone devotion to a particular deity.
+> ਕਾਟਿ ਸਕਤਿ ਸਿਵ ਸਹਜੁ ਪ੍ਰਗਾਸਿਓ ਏਕੈ ਏਕ ਸਮਾਨਾਨਾ
+
+This line contains SHIV (sagun_narrative) alongside SAHAJ and EK (nirgun) --
+"cutting Maya's power, in the Auspicious One, equipoise is illuminated,
+absorbed in the One alone." The mythological name serves the nirgun argument.
 
 ## Implications
 

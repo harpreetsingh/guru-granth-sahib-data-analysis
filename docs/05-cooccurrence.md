@@ -99,6 +99,9 @@ SATNAM, NIRVAIR, NIRBHAU, and MOORAT (PMI 2.7-5.0). These are the attributes
 listed in the opening declaration of the GGS:
 
 > ੴ ਸਤਿ ਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ ਅਕਾਲ ਮੂਰਤਿ ਅਜੂਨੀ ਸੈਭੰ ਗੁਰ ਪ੍ਰਸਾਦਿ
+>
+> *One Creator, Truth is the Name, Creative Being, Without Fear, Without
+> Enmity, Timeless Form, Beyond Birth, Self-Existent, By Guru's Grace.*
 
 The data confirms that when the Gurus invoke one Mool Mantar attribute, they
 tend to invoke multiple attributes together -- reinforcing the holistic nature
@@ -134,9 +137,16 @@ confirming the structured devotional-romantic framework of Gurbani.
 
 ### The Ritual Critique Cluster
 
-BARAT-POOJA (3.022), HAVAN-POOJA, HAVAN-TEERATH cluster together, typically
-in passages critiquing external ritual practices as insufficient for
-spiritual realization.
+BARAT-POOJA (PMI 3.022), HAVAN-POOJA (PMI 2.537), and HAVAN-TEERATH
+(PMI 2.331) cluster together, typically in passages critiquing external
+ritual practices as insufficient for spiritual realization.
+
+### The BRAHMA-QAZI Cross-Tradition Pair
+
+BRAHMA-QAZI (PMI 2.700, 5 angs) is notable as a cross-tradition pairing:
+the Hindu creator deity and the Islamic judge appearing together. This echoes
+the HINDU-TURK identity finding (PMI 6.174) -- the GGS's pattern of naming
+traditions in pairs extends even to its mythological and clerical vocabulary.
 
 ### The Frequency Core
 

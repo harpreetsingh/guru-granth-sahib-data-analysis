@@ -62,10 +62,12 @@ bridal metaphors (Pir, Kant, Sohagan), separation-longing (Birha), devotional
 surrender (Bhagat, Prem). This quantifies the Bhakti character of the text.
 
 **Ethical vocabulary (5.46%) is substantial.** Over 1 in 18 lines references
-inner moral life -- the Five Thieves (Haumai, Kaam, Krodh, Lobh, Moh, Ahankar)
-or cardinal virtues (Daya, Santokh, Nimrata, Seva). This is significant: the GGS
-devotes more textual space to ethical-psychological concerns than to ritual (2.2%),
-cleric critique (0.95%), or interfaith engagement (0.29%) combined.
+inner moral life -- the Five Thieves (Kaam, Krodh, Lobh, Moh, Ahankar) plus
+Haumai (ego, the root from which the Five Thieves arise), or cardinal virtues
+(Daya, Santokh, Nimrata, Seva). The ethical-to-ritual ratio is **2.5:1**
+(5.46% vs 2.20%), meaning the GGS devotes 2.5x more textual space to inner
+moral psychology than to ritual practice. Ethical vocabulary also exceeds
+cleric critique (0.95%) and interfaith engagement (0.29%) combined.
 
 **Oneness markers (2.0%)** capture non-duality language: ਇਕੋ (the One), ਏਕ (One),
 ਜੋਤਿ (divine light pervading all). These lines assert the collapse of metaphysical

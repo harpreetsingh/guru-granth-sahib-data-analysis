@@ -12,7 +12,8 @@ Absolute (nirgun)?
 
 | Metric | Value |
 |--------|-------|
-| Lines containing RAM | 1,894 |
+| Total RAM matches | 2,019 |
+| Unique lines containing RAM | 1,894 |
 | RAM lines with nirgun co-occurrence | 27 ang-level |
 | RAM lines with sagun co-occurrence | 7 ang-level |
 | Nirgun-to-sagun ratio | **3.86:1** |
@@ -87,6 +88,23 @@ illusion, not alongside Sita, Hanuman, or Lanka.
 **ALLAH appears in only 19 lines** of the 60,629-line corpus (0.03%).
 This is extraordinarily rare -- HARI appears 492x more often.
 
+These 19 lines are distributed across 9 ragas:
+
+| Raga | ALLAH Lines |
+|------|------------|
+| Epilogue | 4 |
+| Parbhati | 4 |
+| Gauri | 3 |
+| Aasaa | 2 |
+| Maru | 2 |
+| Sri Raag | 1 |
+| Tilang | 1 |
+| Bhairav | 1 |
+| Ramkali | 1 |
+
+No single raga concentrates ALLAH usage -- the references are scattered
+across the text, consistent with occasional rather than systematic use.
+
 **21% of ALLAH lines also contain Indic divine vocabulary.** In 4 of 19
 appearances, ALLAH co-occurs with RAM (3 times), HARI (1 time), or ALAKH (2
 times, a nirgun epithet). These are the "civilizational synthesis" lines --
@@ -121,11 +139,11 @@ target for critique.
 
 ## Civilizational Density Index
 
-| Register | Total Entity Hits | Lines |
-|----------|------------------|-------|
-| Sanatan (Indic) markers | 16,677 | -- |
-| Islamic markers | 167 | -- |
-| **Ratio** | **99.9:1** | -- |
+| Register | Total Entity Hits |
+|----------|------------------|
+| Sanatan (Indic) markers | 16,677 |
+| Islamic markers | 167 |
+| **Ratio** | **99.9:1** |
 
 The GGS's civilizational vocabulary is **99.9% Sanatan-derived.** For every
 1 Islamic-register entity hit, there are 99.9 Sanatan-register hits. This
@@ -138,7 +156,11 @@ drawn from the Sanskritic-Punjabi lexical register.
 
 ## Stoic-Bhakti-Advaita Triangle
 
-The GGS can be mapped onto a three-axis framework:
+The GGS can be mapped onto a three-axis framework. **Note:** "Stoic" is used
+as an analogy to the Greco-Roman tradition of inner self-mastery, not a claim
+of historical derivation. The GGS's ethical dimension parallels Stoic philosophy
+(equanimity, detachment, virtue cultivation) but is independently grounded in
+South Asian spiritual traditions.
 
 - **Stoic axis (ethical dimension):** Inner moral regulation, Five Thieves,
   virtue cultivation -- 5.46% of lines

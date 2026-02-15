@@ -35,14 +35,40 @@ Each record in `data/corpus/ggs_lines.jsonl` contains:
 
 The Guru Granth Sahib is organized into 31 ragas (musical modes), with a
 preamble section (angs 1-13, containing Japji Sahib and other foundational
-compositions) and an epilogue (angs 1354-1430, containing Salok Sehskritee,
+compositions) and an epilogue (angs 1352-1430, containing Salok Sehskritee,
 Mundavani, Raagmala, etc.).
 
-The largest ragas by ang span:
-- Gauri (151-346, 196 angs)
-- Aasaa (347-488, 142 angs)
-- Maru (989-1106, 118 angs)
-- Ramkali (876-974, 99 angs)
+### Ragas by Size
+
+**Largest ragas** (the bulk of the GGS):
+
+| Raga | Angs | Span | Lines |
+|------|------|------|-------|
+| Gauri | 151-346 | 196 | 9,626 |
+| Aasaa | 347-488 | 142 | 6,200 |
+| Maru | 989-1106 | 118 | 5,181 |
+| Ramkali | 876-974 | 99 | 4,466 |
+| Sri Raag | 14-93 | 80 | 3,161 |
+| Suhi | 728-794 | 67 | 2,657 |
+| Sorath | 595-659 | 65 | 2,642 |
+| Bilawal | 795-858 | 64 | 2,613 |
+
+**Smallest ragas** (concentrated, specialized compositions):
+
+| Raga | Angs | Span | Lines |
+|------|------|------|-------|
+| Bairari | 719-720 | 2 | 51 |
+| Mali Gaura | 984-988 | 5 | 200 |
+| Tilang | 721-727 | 7 | 275 |
+| Kedara | 1118-1124 | 7 | 227 |
+| Todi | 711-718 | 8 | 282 |
+| Kalyan | 1319-1326 | 8 | 259 |
+| Nat Narayan | 975-983 | 9 | 289 |
+| Devgandhari | 527-536 | 10 | 344 |
+
+Gauri alone (196 angs, 9,626 lines) contains more text than the 10 smallest
+ragas combined. The range from 2 angs (Bairari) to 196 angs (Gauri) reflects
+the varying depth of compositional engagement with each musical mode.
 
 ## Authorship
 
@@ -73,13 +99,35 @@ for Bhagats).
 | Bhikhan | 16 | <0.1% |
 | Parmanand | 11 | <0.1% |
 
+```
+Guru Arjan:        42.9%  ████████████████████████████████████████████
+Guru Nanak:        18.5%  ██████████████████▌
+Guru Amar Das:     14.9%  ██████████████▉
+Guru Ram Das:      11.6%  ███████████▌
+Kabir:              6.9%  ██████▉
+Guru Angad:         1.5%  █▌
+Guru Tegh Bahadur:  1.0%  █
+All other Bhagats:  2.7%  ██▋
+```
+
 **Guru Arjan dominates the corpus** with 42.9% of all lines -- nearly as much
-as the next three Gurus combined. The five Gurus collectively account for 88.4%
-of the text, with the 13 Bhagats contributing the remaining 11.6%.
+as the next three Gurus combined. The six Gurus (Mahalla 1-5 and 9) collectively
+account for 90.4% of the text, with the 12 Bhagats and Sundar contributing the
+remaining 9.6%.
+
+**Guru Gobind Singh (the 10th Guru)** compiled the final edition of the GGS
+(1706) but contributed none of his own compositions to it. His bani is collected
+separately in the Dasam Granth.
 
 **Kabir is the largest Bhagat contributor** at 6.9%, exceeding Guru Angad (1.5%)
 and Guru Tegh Bahadur (1.0%) individually. Among Bhagats, Kabir's 4,187 lines
-dwarf all others combined (1,696 lines).
+dwarf all others combined (1,630 lines).
+
+**Note on Sundar (434 lines):** Sundar is not a Bhagat in the traditional sense.
+He was a relative of Guru Ram Das who narrated the passing of the Guruship from
+Guru Ram Das to Guru Arjan in the composition "Ramkali Sadd" (Ang 923). His
+434 lines are classified as a single narrative work, not as independent
+theological compositions like the Bhagat Bani.
 
 ## Languages
 
@@ -104,7 +152,7 @@ and regional vocabularies, unified by Gurmukhi script.
 **Key finding:** Braj Bhasha grammatical markers (4,678) slightly outnumber
 Punjabi-specific markers (3,656) in raw token count, reflecting the substantial
 Bhagat Bani contribution. However, Punjabi is the dominant base language when
-considering the Gurus' 88.4% share of total lines.
+considering the Gurus' 90.4% share of total lines.
 
 **Note:** Our source text (srigranth.com) normalizes away Persian-specific nukta
 diacritics (ਖ਼→ਖ, ਗ਼→ਗ, ਜ਼→ਜ, ਫ਼→ਫ), so Persian/Arabic loanwords appear in

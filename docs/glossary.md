@@ -11,7 +11,7 @@ unfamiliar with Sikh scripture and South Asian religious traditions.
 |------|---------|
 | **Guru Granth Sahib (GGS)** | The central scripture of Sikhism, compiled in the 17th century. Sikhs regard it as a living Guru. |
 | **Ang** | Literally "limb" -- the Sikh term for a page of the GGS. There are 1,430 angs. Sikhs say "ang" rather than "page" out of reverence. |
-| **Shabad** | A hymn or composition. The GGS contains approximately 5,894 shabads by 18 authors. |
+| **Shabad** | A hymn or composition. Our pipeline identifies **2,685 RAHAU markers**, each indicating a distinct compositional unit with a refrain structure. Traditional counts cite ~5,894 shabads (including compositions without RAHAU markers); this number is from external scholarly sources, not our pipeline. |
 | **Mool Mantar** | "The Core Mantra" -- the opening declaration of the GGS (ੴ ਸਤਿ ਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ ਅਕਾਲ ਮੂਰਤਿ ਅਜੂਨੀ ਸੈਭੰ ਗੁਰ ਪ੍ਰਸਾਦਿ). It defines God as One, True Name, Creator, Without Fear, Without Enmity, Timeless Form, Unborn, Self-Existent, Known by the Guru's Grace. |
 | **Rahau** | "Pause" -- a refrain marker (ਰਹਾਉ) indicating the central theme of a shabad. Appears 2,685 times. |
 | **Raga** | A melodic mode/framework. The GGS is organized into 31 ragas, prescribing how each composition should be sung. |
@@ -44,8 +44,12 @@ unfamiliar with Sikh scripture and South Asian religious traditions.
 | **Moh** | Attachment/worldly entanglement |
 | **Ahankar** | Pride/arrogance |
 
-These five vices collectively appear 2,237 times in the GGS. The text devotes
-more space to inner moral struggle (5.46% of lines) than to ritual practice (2.2%).
+The traditional Five Thieves (using AHANKAR) collectively appear **1,699 times**
+in the GGS. If HAUMAI (ego, 627 occurrences) is substituted for AHANKAR (89),
+the total rises to 2,237. In Sikh theology, Haumai is the root from which the
+Five Thieves arise; our pipeline tracks HAUMAI as a distinct entity. The text
+devotes more space to inner moral struggle (5.46% of lines) than to ritual
+practice (2.2%).
 
 ## Religious Identity Terms
 
