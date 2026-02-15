@@ -6,69 +6,92 @@
 
 | Metric                  | Value         |
 |------------------------|---------------|
-| Total matches           | 43,818        |
-| Unique entities matched | 67 of 70      |
-| Lines with matches      | 28,199 (46.5%) |
+| Total matches           | 60,012        |
+| Unique entities matched | 114 of 124    |
+| Lines with matches      | 34,712 (57.3%) |
 | Nested matches          | 40            |
 | Confidence level        | 100% HIGH     |
 
-Nearly half of all lines in the Guru Granth Sahib contain at least one
-recognized theological/conceptual entity from our 70-entity lexicon.
+Over half of all lines in the Guru Granth Sahib contain at least one
+recognized theological/conceptual entity from our 124-entity lexicon.
 
-## Top 30 Entities by Frequency
+## Top 40 Entities by Frequency
 
-| # | Entity ID | Gurmukhi | Register | Category | Tradition | Count |
-|---|-----------|----------|----------|----------|-----------|-------|
-| 1 | HARI | ਹਰਿ | sanskritic | divine_name | universal | 9,341 |
-| 2 | NAAM | ਨਾਮੁ | neutral | concept | sikh | 5,464 |
-| 3 | GUR | ਗੁਰ | neutral | concept | sikh | 4,774 |
-| 4 | PRABH | ਪ੍ਰਭ | sanskritic | divine_name | universal | 2,647 |
-| 5 | SATGUR | ਸਤਿਗੁਰ | neutral | divine_name | sikh | 2,613 |
-| 6 | NA_NEGATION | ਨਾ | neutral | negation | - | 2,229 |
-| 7 | SACH | ਸਚੁ | neutral | concept | sikh | 2,196 |
-| 8 | RAM | ਰਾਮ | sanskritic | divine_name | universal | 2,019 |
-| 9 | SABAD | ਸਬਦ | neutral | concept | sikh | 1,748 |
-| 10 | BINU_NEGATION | ਬਿਨੁ | neutral | negation | - | 1,656 |
-| 11 | SAHAJ | ਸਹਜ | neutral | concept | sikh | 976 |
-| 12 | MAYA | ਮਾਇਆ | sanskritic | concept | vedantic | 833 |
-| 13 | KARAM | ਕਰਮ | sanskritic | concept | vedantic | 620 |
-| 14 | JAP | ਜਪ | sanskritic | practice | universal | 576 |
-| 15 | GIAN | ਗਿਆਨ | sanskritic | concept | vedantic | 572 |
-| 16 | THAKUR | ਠਾਕੁਰ | sanskritic | divine_name | universal | 402 |
-| 17 | HUKAM | ਹੁਕਮੁ | neutral | concept | sikh | 395 |
-| 18 | GOBIND | ਗੋਬਿੰਦ | sanskritic | divine_name | universal | 367 |
-| 19 | MUKTI | ਮੁਕਤਿ | sanskritic | concept | vedantic | 335 |
-| 20 | JOGI | ਜੋਗੀ | sanskritic | marker | yogic | 324 |
-| 21 | SAHIB | ਸਾਹਿਬ | perso_arabic | divine_name | universal | 307 |
-| 22 | JUG | ਜੁਗ | sanskritic | temporal | vedantic | 296 |
-| 23 | AGAM | ਅਗਮ | sanskritic | divine_name | universal | 284 |
-| 24 | DHARAM | ਧਰਮ | sanskritic | concept | vedantic | 269 |
-| 25 | BRAHM | ਬ੍ਰਹਮ | sanskritic | concept | vedantic | 260 |
-| 26 | TEERATH | ਤੀਰਥ | sanskritic | practice | vedantic | 182 |
-| 27 | WAHEGURU | ਵਾਹਿਗੁਰੂ | neutral | divine_name | sikh | 171 |
-| 28 | NIRANJAN | ਨਿਰੰਜਨੁ | sanskritic | divine_name | universal | 169 |
-| 29 | NIRBHAU | ਨਿਰਭਉ | neutral | divine_name | sikh | 163 |
-| 30 | ALAKH | ਅਲਖ | sanskritic | divine_name | universal | 161 |
+| # | Entity ID | Gurmukhi | Count | Dimension(s) |
+|---|-----------|----------|-------|-------------|
+| 1 | HARI | ਹਰਿ | 9,341 | nirgun, sanskritic |
+| 2 | NAAM | ਨਾਮੁ | 5,464 | nirgun |
+| 3 | NANAK | ਨਾਨਕ | 5,000 | nirgun |
+| 4 | GUR | ਗੁਰ | 4,774 | nirgun |
+| 5 | RAHAU | ਰਹਾਉ | 2,685 | devotional |
+| 6 | PRABH | ਪ੍ਰਭ | 2,647 | nirgun, sanskritic |
+| 7 | SATGUR | ਸਤਿਗੁਰ | 2,613 | nirgun |
+| 8 | NA_NEGATION | ਨਾ | 2,229 | -- |
+| 9 | SACH | ਸਚੁ | 2,196 | nirgun |
+| 10 | RAM | ਰਾਮ | 2,019 | nirgun, sanskritic |
+| 11 | SABAD | ਸਬਦ | 1,748 | nirgun |
+| 12 | BINU_NEGATION | ਬਿਨੁ | 1,656 | -- |
+| 13 | BHAGAT | ਭਗਤ | 1,106 | devotional |
+| 14 | SAHAJ | ਸਹਜ | 976 | nirgun |
+| 15 | IK | ਇਕੋ/ਏਕ | 967 | oneness |
+| 16 | MAYA | ਮਾਇਆ | 833 | sanskritic |
+| 17 | SEVA | ਸੇਵਾ | 814 | ethical |
+| 18 | MOH | ਮੋਹ | 781 | ethical |
+| 19 | HAUMAI | ਹਉਮੈ | 627 | ethical |
+| 20 | KARAM | ਕਰਮ | 620 | sanskritic |
+| 21 | DAYA | ਦਇਆ | 581 | ethical |
+| 22 | JAP | ਜਪ | 576 | sanskritic, ritual |
+| 23 | GIAN | ਗਿਆਨ | 572 | sanskritic |
+| 24 | JOTI | ਜੋਤਿ | 412 | oneness |
+| 25 | THAKUR | ਠਾਕੁਰ | 402 | nirgun, sanskritic |
+| 26 | HUKAM | ਹੁਕਮੁ | 395 | nirgun |
+| 27 | YAGYA | ਜਗ | 393 | sanskritic, ritual |
+| 28 | KAAM | ਕਾਮ | 387 | ethical |
+| 29 | GOBIND | ਗੋਬਿੰਦ | 367 | nirgun, sanskritic |
+| 30 | PIR | ਪਿਰ | 359 | devotional |
+| 31 | MUKTI | ਮੁਕਤਿ | 335 | sanskritic |
+| 32 | JOGI | ਜੋਗੀ | 324 | sanskritic, cleric |
+| 33 | SAHIB | ਸਾਹਿਬ | 307 | nirgun |
+| 34 | JUG | ਜੁਗ | 296 | sanskritic |
+| 35 | AGAM | ਅਗਮ | 284 | nirgun |
+| 36 | DHARAM | ਧਰਮ | 269 | sanskritic |
+| 37 | BRAHM | ਬ੍ਰਹਮ | 260 | sanskritic |
+| 38 | LOBH | ਲੋਭ | 232 | ethical |
+| 39 | PREM | ਪ੍ਰੇਮ | 228 | devotional |
+| 40 | VED | ਵੇਦ | 225 | sanskritic, scriptural |
 
 ## Observations
 
 **HARI dominates overwhelmingly.** With 9,341 occurrences, ਹਰਿ (Hari) is by far
-the most frequent divine name -- more than the next two entities combined (NAAM +
-GUR = 10,238). This reflects HARI's role as a universal, register-neutral name
-for the divine in Gurbani.
+the most frequent divine name -- nearly double the next entity (NAAM at 5,464).
+This reflects HARI's role as a universal, register-neutral name for the divine
+in Gurbani.
+
+**NANAK appears 5,000 times** -- a new finding from the expanded lexicon. The
+name ਨਾਨਕ serves as both a signature line marker (Gurus signing compositions
+as "Nanak") and a devotional invocation. Its frequency makes it the third most
+common entity in the corpus.
+
+**RAHAU (ਰਹਾਉ) appears 2,685 times** -- marking the refrain/pause line in
+shabads. This structural marker reveals that the GGS contains approximately
+2,685 distinct compositional units with refrain structures.
 
 **The core Sikh vocabulary cluster (NAAM, GUR, SATGUR, SACH, SABAD, HUKAM,
-SAHAJ)** accounts for ~18,166 matches -- 41% of all matches. These are the
+SAHAJ)** accounts for ~18,166 matches -- 30% of all matches. These are the
 distinctive theological concepts of the Sikh tradition.
 
-**Sanskritic divine names (HARI, PRABH, RAM, THAKUR, GOBIND)** collectively
-account for 14,776 matches (34%), showing deep engagement with Indic theological
-vocabulary.
+**Ethical vocabulary is substantial.** SEVA (814), MOH (781), HAUMAI (627),
+DAYA (581), KAAM (387), LOBH (232), KRODH (210) collectively account for
+3,832 matches. The Five Thieves (Panj Chor) alone appear 2,237 times, showing
+how deeply the GGS engages with inner moral struggle.
 
-**Perso-Arabic terms are sparse.** SAHIB (307) is the only Perso-Arabic entity
-in the top 30. KHUDA appears 45 times, ALLAH 19 times, QAZI 25 times. This
-aligns with the GGS being primarily composed in a Sanskritic-Punjabi register,
-with selective Perso-Arabic borrowings.
+**Devotional vocabulary is pervasive.** BHAGAT (1,106), PIR (359), PREM (228),
+KANT (145), and BIRHA (62) account for 1,900+ matches, revealing the bridal
+mysticism and love-longing vocabulary that pervades the text.
+
+**Perso-Arabic terms are sparse.** After reclassifying SAHIB from perso_arabic
+to neutral (it functions as a universal divine name, not an Islamic marker),
+the top Perso-Arabic entities are: KHUDA (45), FAQIR (34), QAZI (25), ALLAH (19).
 
 **WAHEGURU is relatively rare (171).** Despite being the central name for God in
 modern Sikh practice, it appears far less than HARI (55x more frequent) or

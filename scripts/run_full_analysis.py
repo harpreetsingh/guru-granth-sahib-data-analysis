@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 import sys
 import time
 from collections import Counter, defaultdict
@@ -22,7 +23,7 @@ from ggs.analysis.features import (
     FEATURE_DIMENSIONS,
     compute_corpus_features,
 )
-from ggs.analysis.match import run_matching
+from ggs.analysis.match import MatchRecord, run_matching
 from ggs.lexicon.loader import load_lexicon
 
 console = Console()
@@ -33,9 +34,45 @@ CONFIG_PATH = PROJECT_ROOT / "config" / "config.yaml"
 RESULTS_DIR = PROJECT_ROOT / "data" / "derived"
 LEXICON_DIR = PROJECT_ROOT / "lexicon"
 
+# Gurmukhi numeral → int
+_GNUM = {
+    "੧": 1, "੨": 2, "੩": 3, "੪": 4, "੫": 5,
+    "੬": 6, "੭": 7, "੮": 8, "੯": 9,
+}
+
+GURU_NAMES = {
+    1: "Guru Nanak",
+    2: "Guru Angad",
+    3: "Guru Amar Das",
+    4: "Guru Ram Das",
+    5: "Guru Arjan",
+    9: "Guru Tegh Bahadur",
+}
+
+_BHAGAT_HEADERS: list[tuple[str, str]] = [
+    ("ਕਬੀਰ", "Kabir"),
+    ("ਫਰੀਦ", "Farid"),
+    ("ਨਾਮਦੇਵ", "Namdev"),
+    ("ਰਵਿਦਾਸ", "Ravidas"),
+    ("ਤ੍ਰਿਲੋਚਨ", "Trilochan"),
+    ("ਬੇਣੀ", "Beni"),
+    ("ਧੰਨਾ", "Dhanna"),
+    ("ਜੈਦੇਵ", "Jaidev"),
+    ("ਪੀਪਾ", "Pipa"),
+    ("ਸੈਣ", "Sain"),
+    ("ਪਰਮਾਨੰਦ", "Parmanand"),
+    ("ਸੂਰਦਾਸ", "Surdas"),
+    ("ਸੁੰਦਰ", "Sundar"),
+    ("ਰਾਮਾਨੰਦ", "Ramanand"),
+    ("ਭੀਖਨ", "Bhikhan"),
+    ("ਸਧਨਾ", "Sadhna"),
+]
+
+_MAHALLA_PAT = re.compile(r"ਮਹਲਾ\s*([੧੨੩੪੫੬੭੮੯]|ਪਹਿਲਾ)")
+
 
 def load_corpus() -> list[dict]:
-    records = []
+    records: list[dict] = []
     with CORPUS_PATH.open("r", encoding="utf-8") as f:
         for line in f:
             records.append(json.loads(line))
@@ -44,8 +81,49 @@ def load_corpus() -> list[dict]:
 
 def load_config() -> dict:
     import yaml
+
     with CONFIG_PATH.open("r", encoding="utf-8") as f:
         return yaml.safe_load(f)
+
+
+def extract_authors(
+    records: list[dict],
+) -> dict[str, str]:
+    """Extract author for each line based on header patterns.
+
+    Returns mapping of line_uid -> author name.
+    """
+    uid_to_author: dict[str, str] = {}
+    current_author = "Guru Nanak"  # Japji Sahib (angs 1-7)
+
+    for rec in records:
+        g = rec.get("gurmukhi", "")
+        tokens = rec.get("tokens", [])
+
+        # Check for mahalla header
+        m = _MAHALLA_PAT.search(g)
+        if m:
+            num_str = m.group(1)
+            if num_str == "ਪਹਿਲਾ":
+                current_author = GURU_NAMES[1]
+            elif num_str in _GNUM:
+                mahalla = _GNUM[num_str]
+                current_author = GURU_NAMES.get(
+                    mahalla, f"Mahalla {mahalla}"
+                )
+
+        # Check for bhagat header patterns (short lines
+        # with bhagat name + ਜੀਉ/ਜੀ/ਕੀ/ਕਾ)
+        for gur_name, eng_name in _BHAGAT_HEADERS:
+            if gur_name in g and len(tokens) < 12:
+                header_markers = {"ਜੀਉ", "ਜੀ", "ਕੀ", "ਕਾ"}
+                if header_markers & set(tokens):
+                    current_author = eng_name
+                    break
+
+        uid_to_author[rec["line_uid"]] = current_author
+
+    return uid_to_author
 
 
 def main() -> None:
@@ -77,6 +155,26 @@ def main() -> None:
     )
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    # ===================================================================
+    # Author Extraction
+    # ===================================================================
+    console.print("[bold]Extracting authors...[/bold]")
+    uid_to_author = extract_authors(records)
+    author_counts = Counter(uid_to_author.values())
+    unique_authors = sorted(author_counts.keys())
+    console.print(f"  {len(unique_authors)} authors identified\n")
+
+    table = Table(title="Author Distribution")
+    table.add_column("Author", style="cyan")
+    table.add_column("Lines", justify="right")
+    table.add_column("% Corpus", justify="right")
+    for auth, cnt in author_counts.most_common():
+        table.add_row(
+            auth, str(cnt),
+            f"{100 * cnt / len(records):.1f}%",
+        )
+    console.print(table)
 
     # ===================================================================
     # Phase 1: Matching
@@ -226,7 +324,10 @@ def main() -> None:
     # Phase 2c: Co-occurrence Analysis
     # ===================================================================
     console.print("\n[bold magenta]" + "-" * 50 + "[/bold magenta]")
-    console.print("[bold magenta]  Phase 2c: Co-occurrence (Shabad-Level)[/bold magenta]")
+    console.print(
+        "[bold magenta]  Phase 2c: Co-occurrence (Ang-Level)"
+        "[/bold magenta]"
+    )
     console.print("[bold magenta]" + "-" * 50 + "[/bold magenta]\n")
 
     # Build line -> ang mapping for co-occurrence units
@@ -245,7 +346,7 @@ def main() -> None:
     entity_freq: Counter = Counter()
     pair_freq: Counter = Counter()
 
-    for ang_id, entities in matches_by_ang.items():
+    for _ang_id, entities in matches_by_ang.items():
         for eid in entities:
             entity_freq[eid] += 1
         elist = sorted(entities)
@@ -412,6 +513,249 @@ def main() -> None:
     console.print(f"  Both nirgun+sagun:   {nirgun_sagun_both}")
 
     # ===================================================================
+    # Phase 4: Per-Author Analysis
+    # ===================================================================
+    console.print("\n[bold magenta]" + "-" * 50 + "[/bold magenta]")
+    console.print(
+        "[bold magenta]  Phase 4: Per-Author Analysis"
+        "[/bold magenta]"
+    )
+    console.print("[bold magenta]" + "-" * 50 + "[/bold magenta]\n")
+
+    # Group matches and features by author
+    matches_by_line: dict[str, list[MatchRecord]] = defaultdict(
+        list,
+    )
+    for m in all_matches:
+        if m.nested_in is None:
+            matches_by_line[m.line_uid].append(m)
+
+    author_entity_freq: dict[str, Counter] = defaultdict(Counter)
+    author_dim_lines: dict[str, dict[str, int]] = defaultdict(
+        lambda: {d: 0 for d in FEATURE_DIMENSIONS},
+    )
+    author_line_counts: Counter = Counter()
+
+    for fr in feature_records:
+        uid = fr["line_uid"]
+        author = uid_to_author.get(uid, "Unknown")
+        author_line_counts[author] += 1
+
+        for m in matches_by_line.get(uid, []):
+            author_entity_freq[author][m.entity_id] += 1
+
+        for dim in FEATURE_DIMENSIONS:
+            if fr["features"][dim]["count"] > 0:
+                author_dim_lines[author][dim] += 1
+
+    # Per-author register density table
+    table = Table(
+        title="Per-Author Register Profile (% of author's lines)",
+    )
+    table.add_column("Author", style="cyan")
+    table.add_column("Lines", justify="right")
+    for dim in FEATURE_DIMENSIONS:
+        table.add_column(dim[:8], justify="right")
+    for auth, cnt in author_counts.most_common():
+        row = [auth, str(cnt)]
+        for dim in FEATURE_DIMENSIONS:
+            n = author_dim_lines[auth][dim]
+            pct = 100 * n / cnt if cnt > 0 else 0
+            row.append(f"{pct:.1f}%")
+        table.add_row(*row)
+    console.print(table)
+
+    # Per-author top entities
+    author_profiles: dict[str, dict] = {}
+    for auth in unique_authors:
+        top = author_entity_freq[auth].most_common(10)
+        author_profiles[auth] = {
+            "lines": author_line_counts[auth],
+            "top_entities": [
+                {"entity_id": e, "count": c} for e, c in top
+            ],
+            "register_pct": {
+                dim: round(
+                    100 * author_dim_lines[auth][dim]
+                    / max(1, author_line_counts[auth]),
+                    2,
+                )
+                for dim in FEATURE_DIMENSIONS
+            },
+        }
+
+    # ===================================================================
+    # Phase 5: Semantic Analysis
+    # ===================================================================
+    console.print("\n[bold magenta]" + "-" * 50 + "[/bold magenta]")
+    console.print(
+        "[bold magenta]  Phase 5: Semantic Analysis"
+        "[/bold magenta]"
+    )
+    console.print("[bold magenta]" + "-" * 50 + "[/bold magenta]\n")
+
+    # 5a: RAM semantic behavior — what co-occurs with RAM
+    # on the same LINE?
+    ram_cooccur: Counter = Counter()
+    ram_line_count = 0
+    for _uid, line_matches in matches_by_line.items():
+        eids = {m.entity_id for m in line_matches}
+        if "RAM" in eids:
+            ram_line_count += 1
+            for e in eids:
+                if e != "RAM":
+                    ram_cooccur[e] += 1
+
+    ram_nirgun = sum(
+        c for e, c in ram_cooccur.items()
+        if e in {
+            "NIRANKAR", "AKAL", "ALAKH", "AGAM", "NIRANJAN",
+            "NIRBHAU", "NIRVAIR", "AJOONI", "NIRAGUN", "AGOCHAR",
+        }
+    )
+    ram_sagun = sum(
+        c for e, c in ram_cooccur.items()
+        if e in {
+            "RAMCHANDRA", "SITA", "DASRATH", "LACHMAN", "RAVAN",
+            "KRISHNA", "SHIV", "BRAHMA",
+        }
+    )
+    console.print(f"  RAM appears on {ram_line_count} lines")
+    console.print(
+        f"  RAM + nirgun marker: {ram_nirgun} co-occurrences"
+    )
+    console.print(
+        f"  RAM + sagun narrative: {ram_sagun} co-occurrences"
+    )
+    console.print(
+        f"  Top RAM co-occurrences: "
+        f"{ram_cooccur.most_common(8)}\n"
+    )
+
+    # 5b: ALLAH context — what appears on the same line?
+    allah_cooccur: Counter = Counter()
+    allah_line_count = 0
+    allah_with_indic = 0
+    for _uid, line_matches in matches_by_line.items():
+        eids = {m.entity_id for m in line_matches}
+        if "ALLAH" in eids:
+            allah_line_count += 1
+            indic_entities = {
+                "HARI", "RAM", "GOBIND", "PRABH", "BRAHM",
+                "NARAYANA", "BISN", "THAKUR",
+            }
+            if eids & indic_entities:
+                allah_with_indic += 1
+            for e in eids:
+                if e != "ALLAH":
+                    allah_cooccur[e] += 1
+
+    console.print(f"  ALLAH appears on {allah_line_count} lines")
+    if allah_line_count > 0:
+        console.print(
+            f"  ALLAH + Indic divine name: "
+            f"{allah_with_indic} lines "
+            f"({100 * allah_with_indic / allah_line_count:.0f}%)"
+        )
+    console.print(
+        f"  Top ALLAH co-occurrences: "
+        f"{allah_cooccur.most_common(8)}\n"
+    )
+
+    # 5c: Cross-tradition lines (Hindu + Muslim identity markers)
+    cross_trad_lines = 0
+    identity_lines = 0
+    for fr in feature_records:
+        uid = fr["line_uid"]
+        eids = {
+            m.entity_id for m in matches_by_line.get(uid, [])
+        }
+        has_indic_id = bool(eids & {"HINDU"})
+        has_islamic_id = bool(
+            eids & {"MUSALMAN", "TURK"}
+        )
+        if has_indic_id or has_islamic_id:
+            identity_lines += 1
+        if has_indic_id and has_islamic_id:
+            cross_trad_lines += 1
+
+    console.print(
+        f"  Lines with identity markers: {identity_lines}"
+    )
+    console.print(
+        f"  Cross-tradition lines (Hindu+Muslim): "
+        f"{cross_trad_lines}"
+    )
+
+    # ===================================================================
+    # Phase 6: Composite Indices
+    # ===================================================================
+    console.print("\n[bold magenta]" + "-" * 50 + "[/bold magenta]")
+    console.print(
+        "[bold magenta]  Phase 6: Composite Indices"
+        "[/bold magenta]"
+    )
+    console.print("[bold magenta]" + "-" * 50 + "[/bold magenta]\n")
+
+    # 6a: Stoic-Bhakti-Advaita triangle per author
+    console.print("[bold]Stoic-Bhakti-Advaita Triangle:[/bold]")
+    table = Table(
+        title=(
+            "Per-Author Stoic-Bhakti-Advaita Profile "
+            "(% of author's lines)"
+        ),
+    )
+    table.add_column("Author", style="cyan")
+    table.add_column("Lines", justify="right")
+    table.add_column("Ethical", justify="right", style="yellow")
+    table.add_column("Devotion", justify="right", style="green")
+    table.add_column("Nirgun", justify="right", style="magenta")
+    table.add_column("Oneness", justify="right", style="blue")
+    for auth, cnt in author_counts.most_common():
+        pct_e = author_dim_lines[auth]["ethical"]
+        pct_d = author_dim_lines[auth]["devotional"]
+        pct_n = author_dim_lines[auth]["nirgun"]
+        pct_o = author_dim_lines[auth]["oneness"]
+        table.add_row(
+            auth, str(cnt),
+            f"{100 * pct_e / cnt:.1f}%",
+            f"{100 * pct_d / cnt:.1f}%",
+            f"{100 * pct_n / cnt:.1f}%",
+            f"{100 * pct_o / cnt:.1f}%",
+        )
+    console.print(table)
+
+    # 6b: Civilizational Density Index
+    sanatan_entities = {
+        "HARI", "RAM", "GOBIND", "PRABH", "THAKUR",
+        "NARAYANA", "BISN", "BRAHM", "ATMA", "MAYA",
+        "KRISHNA", "RAMCHANDRA", "SHIV", "BRAHMA",
+        "VED", "PURAN", "SHASTAR",
+    }
+    islamic_entities = {
+        "ALLAH", "KHUDA", "RABB", "MAULA",
+        "RAHMAN", "RAHIM", "NOOR",
+        "QURAN", "KITAB", "NABI", "PAIGAMBAR",
+        "NAMAZ", "ROZA", "HAJI", "MAKKA", "MASJID",
+        "QAZI", "MULLAH", "FAQIR",
+    }
+
+    sanatan_total = sum(
+        match_by_entity.get(e, 0) for e in sanatan_entities
+    )
+    islamic_total = sum(
+        match_by_entity.get(e, 0) for e in islamic_entities
+    )
+    console.print(
+        f"\n  Sanatan marker total: {sanatan_total}"
+    )
+    console.print(f"  Islamic marker total: {islamic_total}")
+    if islamic_total > 0:
+        console.print(
+            f"  Ratio: {sanatan_total / islamic_total:.1f}:1"
+        )
+
+    # ===================================================================
     # Save all results
     # ===================================================================
     console.print("\n[bold]Saving results...[/bold]")
@@ -421,6 +765,10 @@ def main() -> None:
             "total_lines": len(records),
             "total_tokens": total_tokens,
             "total_angs": total_angs,
+            "total_authors": len(unique_authors),
+            "author_distribution": {
+                a: c for a, c in author_counts.most_common()
+            },
         },
         "matching": {
             "total_matches": len(all_matches),
@@ -467,13 +815,46 @@ def main() -> None:
             "total_cooccurrence_units": total_shabads,
             "pairs_with_min_5": len(pmi_scores),
             "top_pmi": [
-                {"e1": e1, "e2": e2, "pmi": round(pmi, 3), "count": c}
+                {
+                    "e1": e1, "e2": e2,
+                    "pmi": round(pmi, 3), "count": c,
+                }
                 for e1, e2, pmi, c in pmi_scores[:30]
             ],
             "top_frequency": [
                 {"e1": e1, "e2": e2, "count": c}
                 for (e1, e2), c in pair_freq.most_common(30)
             ],
+        },
+        "author_profiles": author_profiles,
+        "semantic": {
+            "ram": {
+                "line_count": ram_line_count,
+                "nirgun_cooccur": ram_nirgun,
+                "sagun_cooccur": ram_sagun,
+                "top_cooccur": [
+                    {"entity": e, "count": c}
+                    for e, c in ram_cooccur.most_common(20)
+                ],
+            },
+            "allah": {
+                "line_count": allah_line_count,
+                "with_indic_divine": allah_with_indic,
+                "top_cooccur": [
+                    {"entity": e, "count": c}
+                    for e, c in allah_cooccur.most_common(20)
+                ],
+            },
+            "cross_tradition_lines": cross_trad_lines,
+            "identity_lines": identity_lines,
+        },
+        "civilizational": {
+            "sanatan_total": sanatan_total,
+            "islamic_total": islamic_total,
+            "ratio": (
+                round(sanatan_total / islamic_total, 1)
+                if islamic_total > 0 else None
+            ),
         },
     }
 

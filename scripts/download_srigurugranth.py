@@ -148,16 +148,10 @@ def parse_ang(ang: int) -> list[dict]:
         # Approach 2: BeautifulSoup with case-insensitive search
         for p in soup.find_all("p"):
             cls = p.get("class", [])
-            if isinstance(cls, list):
-                cls_str = " ".join(cls)
-            else:
-                cls_str = str(cls)
+            cls_str = " ".join(cls) if isinstance(cls, list) else str(cls)
             if "gurb" in cls_str.lower():
                 span = p.find("span")
-                if span:
-                    text = span.get_text(strip=True)
-                else:
-                    text = p.get_text(strip=True)
+                text = span.get_text(strip=True) if span else p.get_text(strip=True)
                 if text:
                     gurb_lines.append(text)
 
@@ -256,7 +250,7 @@ def main() -> None:
         for rec in all_records:
             fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
 
-    console.print(f"\n[bold cyan]Results[/bold cyan]")
+    console.print("\n[bold cyan]Results[/bold cyan]")
     console.print(f"  Total lines:  {len(all_records)}")
     console.print(f"  Total angs:   {TOTAL_ANGS - len(empty_angs)}")
     console.print(f"  Empty angs:   {len(empty_angs)}")
@@ -268,7 +262,7 @@ def main() -> None:
             f"{'...' if len(empty_angs) > 10 else ''}[/yellow]"
         )
 
-    console.print(f"\n[bold green]Done.[/bold green]\n")
+    console.print("\n[bold green]Done.[/bold green]\n")
 
 
 if __name__ == "__main__":

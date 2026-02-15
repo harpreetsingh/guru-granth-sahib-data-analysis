@@ -60,6 +60,11 @@ entity:
         - practice            # Ritual/worship practices (ਤੀਰਥ, ਜਪ, ਪੂਜਾ)
         - negation            # Negation words for co-occurrence analysis (ਨਾ, ਬਿਨੁ)
         - temporal            # Cosmological/time terms (ਜੁਗ, ਕਲਿਜੁਗ)
+        - ethical             # Inner vices and virtues (ਹਉਮੈ, ਦਇਆ, ਸੰਤੋਖ)
+        - devotional          # Love/longing/surrender vocabulary (ਪਿਰ, ਕੰਤ, ਬਿਰਹਾ)
+        - identity            # Religious identity labels (ਹਿੰਦੂ, ਮੁਸਲਮਾਨ)
+        - scriptural          # References to specific scriptures (ਵੇਦ, ਕੁਰਾਣ)
+        - oneness             # Non-duality markers (ਇਕੋ, ਜੋਤਿ)
       description: >
         Functional category of the entity.  Controls how the entity
         is used in feature computation and tagging.

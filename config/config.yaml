@@ -47,6 +47,9 @@ lexicon_paths:
   sagun_narrative: lexicon/sagun_narrative.yaml
   perso_arabic: lexicon/perso_arabic.yaml
   sanskritic: lexicon/sanskritic.yaml
+  ethical: lexicon/ethical.yaml
+  devotional: lexicon/devotional.yaml
+  identity: lexicon/identity.yaml
   polysemy: lexicon/polysemy.yaml
 
 # ---------------------------------------------------------------------------

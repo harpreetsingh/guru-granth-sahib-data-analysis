@@ -160,6 +160,174 @@ entities:
     notes: "Hanuman — devotee of Ram in Ramayana narrative"
 
   # -------------------------------------------------------------------------
+  # Goddess figures
+  # -------------------------------------------------------------------------
+
+  - id: DURGA
+    canonical_form: ਦੁਰਗਾ
+    aliases:
+      - form: ਦੁਰਗਾ
+        type: exact
+      - form: ਭਵਾਨੀ
+        type: exact
+      - form: ਚੰਡੀ
+        type: exact
+    category: narrative
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Durga/Bhavani/Chandi — warrior goddess"
+
+  - id: LAKHMI
+    canonical_form: ਲਛਮੀ
+    aliases:
+      - form: ਲਛਮੀ
+        type: exact
+      - form: ਲਖਮੀ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Lakshmi — goddess of fortune"
+
+  - id: SARASVATI
+    canonical_form: ਸਰਸਵਤੀ
+    aliases:
+      - form: ਸਰਸਵਤੀ
+        type: exact
+    category: narrative
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Saraswati — goddess of knowledge"
+
+  # -------------------------------------------------------------------------
+  # Ramayana epic figures
+  # -------------------------------------------------------------------------
+
+  - id: SITA
+    canonical_form: ਸੀਤਾ
+    aliases:
+      - form: ਸੀਤਾ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Sita — consort of Ramchandra"
+
+  - id: DASRATH
+    canonical_form: ਦਸਰਥ
+    aliases:
+      - form: ਦਸਰਥ
+        type: exact
+      - form: ਦਸਰਥੁ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Dasharatha — father of Ramchandra"
+
+  - id: LACHMAN
+    canonical_form: ਲਛਮਣ
+    aliases:
+      - form: ਲਛਮਣ
+        type: exact
+      - form: ਲਖਮਣ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Lakshman — brother of Ramchandra"
+
+  - id: RAVAN
+    canonical_form: ਰਾਵਣ
+    aliases:
+      - form: ਰਾਵਣ
+        type: exact
+      - form: ਰਾਵਣੁ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Ravana — demon king of Lanka"
+
+  - id: VALMIK
+    canonical_form: ਵਾਲਮੀਕ
+    aliases:
+      - form: ਬਾਲਮੀਕ
+        type: exact
+      - form: ਬਾਲਮੀਕਿ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Valmiki — author of the Ramayana, also a Bhagat"
+
+  # -------------------------------------------------------------------------
+  # Krishna / Mahabharata epic figures
+  # -------------------------------------------------------------------------
+
+  - id: KANS
+    canonical_form: ਕੰਸ
+    aliases:
+      - form: ਕੰਸ
+        type: exact
+      - form: ਕੰਸੁ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Kansa — demon king slain by Krishna"
+
+  - id: GOPI
+    canonical_form: ਗੋਪੀ
+    aliases:
+      - form: ਗੋਪੀ
+        type: exact
+    category: narrative
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Gopi — milkmaids devoted to Krishna"
+
+  # -------------------------------------------------------------------------
+  # Vedic / cosmic figures
+  # -------------------------------------------------------------------------
+
+  - id: INDR
+    canonical_form: ਇੰਦ੍ਰ
+    aliases:
+      - form: ਇੰਦ੍ਰ
+        type: exact
+      - form: ਇੰਦ੍ਰੁ
+        type: exact
+      - form: ਇੰਦ
+        type: exact
+    category: narrative
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Indra — king of the gods in Vedic mythology"
+
+  # -------------------------------------------------------------------------
   # Sagun concept
   # -------------------------------------------------------------------------
 

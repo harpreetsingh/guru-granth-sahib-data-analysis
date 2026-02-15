@@ -155,10 +155,10 @@ entities:
         type: exact
     category: divine_name
     tradition: universal
-    register: perso_arabic
+    register: neutral
     polysemous: false
     added_version: "1.0.0"
-    notes: "Lord/Master — Perso-Arabic origin, used for God in GGS"
+    notes: "Lord/Master — reclassified from perso_arabic to neutral (bd-3qx). Used universally in GGS alongside Sikh vocabulary, not in Islamic contexts."
 
   - id: KHUDA
     canonical_form: ਖ਼ੁਦਾ
@@ -175,6 +175,52 @@ entities:
     polysemous: false
     added_version: "1.0.0"
     notes: "Persian name for God"
+
+  - id: NARAYANA
+    canonical_form: ਨਾਰਾਇਣ
+    aliases:
+      - form: ਨਾਰਾਇਣ
+        type: exact
+      - form: ਨਾਰਾਇਣੁ
+        type: exact
+      - form: ਨਾਰਾਇਣਿ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "All-pervading Lord — Vedantic divine name used in GGS"
+
+  - id: BISN
+    canonical_form: ਬਿਸਨ
+    aliases:
+      - form: ਬਿਸਨ
+        type: exact
+      - form: ਬਿਸਨੁ
+        type: exact
+    category: divine_name
+    tradition: vaishnava
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Vishnu — GGS spelling is ਬਿਸਨ not ਵਿਸ਼ਨੁ"
+
+  - id: NANAK
+    canonical_form: ਨਾਨਕ
+    aliases:
+      - form: ਨਾਨਕ
+        type: exact
+      - form: ਨਾਨਕੁ
+        type: exact
+      - form: ਨਾਨਕਿ
+        type: exact
+    category: divine_name
+    tradition: sikh
+    register: neutral
+    polysemous: true
+    added_version: "2.0.0"
+    notes: "Nanak — used as authorial signature and divine teacher reference. Polysemous: authorial vs devotional."
 
   # -------------------------------------------------------------------------
   # Core theological concepts

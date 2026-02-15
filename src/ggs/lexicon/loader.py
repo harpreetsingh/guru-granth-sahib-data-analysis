@@ -36,6 +36,11 @@ VALID_CATEGORIES = frozenset({
     "practice",
     "negation",
     "temporal",
+    "ethical",
+    "devotional",
+    "identity",
+    "scriptural",
+    "oneness",
 })
 
 VALID_TRADITIONS = frozenset({

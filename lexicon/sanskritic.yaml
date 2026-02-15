@@ -132,6 +132,144 @@ entities:
     notes: "Spiritual knowledge/wisdom"
 
   # -------------------------------------------------------------------------
+  # Scriptural references (Indic)
+  # -------------------------------------------------------------------------
+
+  - id: VED
+    canonical_form: ਵੇਦ
+    aliases:
+      - form: ਵੇਦ
+        type: exact
+      - form: ਵੇਦੁ
+        type: exact
+      - form: ਵੇਦਾ
+        type: exact
+      - form: ਬੇਦ
+        type: exact
+      - form: ਬੇਦੁ
+        type: exact
+    category: scriptural
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Vedas — foundational Indic scripture, often critiqued/contextualized in GGS"
+
+  - id: PURAN
+    canonical_form: ਪੁਰਾਣ
+    aliases:
+      - form: ਪੁਰਾਣ
+        type: exact
+      - form: ਪੁਰਾਣੁ
+        type: exact
+    category: scriptural
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Puranas — Hindu mythological scriptures"
+
+  - id: SHASTAR
+    canonical_form: ਸਾਸਤ
+    aliases:
+      - form: ਸਾਸਤ
+        type: exact
+      - form: ਸਾਸਤੁ
+        type: exact
+      - form: ਸਾਸਤ੍ਰ
+        type: exact
+    category: scriptural
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Shastras — Hindu philosophical treatises"
+
+  - id: SIMRIT
+    canonical_form: ਸਿਮ੍ਰਿਤ
+    aliases:
+      - form: ਸਿਮ੍ਰਿਤ
+        type: exact
+      - form: ਸਿਮ੍ਰਿਤਿ
+        type: exact
+    category: scriptural
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Smriti — remembered scripture, dharmic law texts"
+
+  # -------------------------------------------------------------------------
+  # Additional clerical markers
+  # -------------------------------------------------------------------------
+
+  - id: BRAHMIN
+    canonical_form: ਬ੍ਰਾਹਮਣ
+    aliases:
+      - form: ਬ੍ਰਾਹਮਣ
+        type: exact
+      - form: ਬ੍ਰਾਹਮਣੁ
+        type: exact
+      - form: ਬ੍ਰਾਹਮਣਾ
+        type: exact
+      - form: ਬਾਮ੍ਹ੍ਹਣ
+        type: exact
+    category: marker
+    tradition: vedantic
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Brahmin — priestly caste, often referenced in critique of religious authority"
+
+  - id: SIDDH
+    canonical_form: ਸਿਧ
+    aliases:
+      - form: ਸਿਧ
+        type: exact
+      - form: ਸਿਧੁ
+        type: exact
+      - form: ਸਿੱਧ
+        type: exact
+    category: marker
+    tradition: yogic
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Siddh — perfected yogic being, Nath tradition"
+
+  # -------------------------------------------------------------------------
+  # Additional ritual/practice terms
+  # -------------------------------------------------------------------------
+
+  - id: MOORAT
+    canonical_form: ਮੂਰਤਿ
+    aliases:
+      - form: ਮੂਰਤਿ
+        type: exact
+      - form: ਮੂਰਤ
+        type: exact
+    category: practice
+    tradition: vedantic
+    register: sanskritic
+    polysemous: true
+    added_version: "2.0.0"
+    notes: "Idol/form — polysemous: also means 'form/image' in Mool Mantar (ਅਕਾਲ ਮੂਰਤਿ)"
+
+  - id: YAGYA
+    canonical_form: ਜਗ
+    aliases:
+      - form: ਜਗ
+        type: exact
+      - form: ਜਗੁ
+        type: exact
+    category: practice
+    tradition: vedantic
+    register: sanskritic
+    polysemous: true
+    added_version: "2.0.0"
+    notes: "Sacrifice/fire ritual — polysemous: ਜਗ also means 'world'. Context determines."
+
+  # -------------------------------------------------------------------------
   # Sanskritic ritual/practice terms
   # -------------------------------------------------------------------------
 

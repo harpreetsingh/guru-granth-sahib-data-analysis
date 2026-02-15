@@ -1,0 +1,153 @@
+# ============================================================================
+# Devotional / Bhakti Lexicon — devotional.yaml
+# ============================================================================
+# Relational devotional vocabulary: bride-bridegroom metaphors, longing,
+# surrender, and structural markers like rahau. These capture the Bhakti
+# dimension — the experiential, devotional heart of the text.
+#
+# Reference: questions/Mapv2.md Section IV, questions/Mapv3_harpreet.md Q12
+# Schema: lexicon/_schema.yaml
+# ============================================================================
+
+entities:
+  # -------------------------------------------------------------------------
+  # Bridal / relational metaphors
+  # -------------------------------------------------------------------------
+
+  - id: PIR
+    canonical_form: ਪਿਰ
+    aliases:
+      - form: ਪਿਰ
+        type: exact
+      - form: ਪਿਰੁ
+        type: exact
+      - form: ਪਿਰਿ
+        type: exact
+    category: devotional
+    tradition: bhakti
+    register: neutral
+    polysemous: true
+    added_version: "2.0.0"
+    notes: "Husband/Beloved — the soul's divine spouse. Polysemous: also Sufi master."
+
+  - id: KANT
+    canonical_form: ਕੰਤ
+    aliases:
+      - form: ਕੰਤ
+        type: exact
+      - form: ਕੰਤੁ
+        type: exact
+      - form: ਕੰਤਿ
+        type: exact
+      - form: ਕੰਤੈ
+        type: exact
+    category: devotional
+    tradition: bhakti
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Husband-Lord — the divine as spouse of the soul"
+
+  - id: SOHAGAN
+    canonical_form: ਸੋਹਾਗਣਿ
+    aliases:
+      - form: ਸੋਹਾਗਣ
+        type: exact
+      - form: ਸੋਹਾਗਣਿ
+        type: exact
+      - form: ਸੁਹਾਗ
+        type: exact
+      - form: ਸੁਹਾਗਣ
+        type: exact
+    category: devotional
+    tradition: bhakti
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Fortunate bride — soul united with the divine spouse"
+
+  - id: DOHAGAN
+    canonical_form: ਦੋਹਾਗਣਿ
+    aliases:
+      - form: ਦੋਹਾਗਣ
+        type: exact
+      - form: ਦੋਹਾਗਣਿ
+        type: exact
+      - form: ਦੁਹਾਗਣਿ
+        type: exact
+    category: devotional
+    tradition: bhakti
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Forsaken bride — soul separated from the divine"
+
+  # -------------------------------------------------------------------------
+  # Longing and surrender
+  # -------------------------------------------------------------------------
+
+  - id: BIRHA
+    canonical_form: ਬਿਰਹਾ
+    aliases:
+      - form: ਬਿਰਹਾ
+        type: exact
+      - form: ਬਿਰਹੁ
+        type: exact
+      - form: ਬਿਰਹਿ
+        type: exact
+    category: devotional
+    tradition: bhakti
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Separation-pain/longing — intense yearning for union with the divine"
+
+  - id: PREM
+    canonical_form: ਪ੍ਰੇਮ
+    aliases:
+      - form: ਪ੍ਰੇਮ
+        type: exact
+      - form: ਪ੍ਰੇਮੁ
+        type: exact
+      - form: ਪ੍ਰੇਮਿ
+        type: exact
+    category: devotional
+    tradition: bhakti
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Divine love — selfless, unconditional love for God"
+
+  - id: BHAGAT
+    canonical_form: ਭਗਤ
+    aliases:
+      - form: ਭਗਤ
+        type: exact
+      - form: ਭਗਤੁ
+        type: exact
+      - form: ਭਗਤਿ
+        type: exact
+      - form: ਭਗਤੀ
+        type: exact
+    category: devotional
+    tradition: bhakti
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Devotee/devotion — one who practices bhakti"
+
+  # -------------------------------------------------------------------------
+  # Structural / musical markers
+  # -------------------------------------------------------------------------
+
+  - id: RAHAU
+    canonical_form: ਰਹਾਉ
+    aliases:
+      - form: ਰਹਾਉ
+        type: exact
+    category: devotional
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Pause/refrain — marks the central theme line of a shabad"

@@ -17,8 +17,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from rich.console import Console
 
-from ggs.corpus.scrape import ScrapeConfig, scrape_corpus
 from ggs.corpus.pipeline import run_phase0
+from ggs.corpus.scrape import ScrapeConfig, scrape_corpus
 from ggs.pipeline.errors import ErrorConfig
 
 console = Console()
@@ -98,7 +98,7 @@ def main() -> None:
     console.print(f"  Total angs:  {result['total_angs']}")
     console.print(f"  Total lines: {result['total_lines']}")
     console.print(f"  Validation:  {result['validation_verdict']}")
-    console.print(f"  Output files:")
+    console.print("  Output files:")
     for f in result.get("output_files", []):
         console.print(f"    {f}")
     console.print()

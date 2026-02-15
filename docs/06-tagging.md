@@ -23,15 +23,16 @@ hierarchy:
 
 | Tag | Lines | % of Corpus |
 |-----|-------|-------------|
-| unmarked | 34,328 | 56.62% |
-| nirgun_leaning | 23,087 | 38.08% |
-| sanskritic_register | 2,034 | 3.35% |
-| cleric_reference | 342 | 0.56% |
-| ritual_reference | 325 | 0.54% |
-| perso_arabic_register | 261 | 0.43% |
-| sagun_narrative | 179 | 0.30% |
-| mixed_nirgun_sagun | 66 | 0.11% |
-| critique_both | 7 | 0.01% |
+| unmarked | 30,131 | 49.69% |
+| nirgun_leaning | 25,535 | 42.12% |
+| sanskritic_register | 3,547 | 5.85% |
+| ritual_reference | 585 | 0.96% |
+| cleric_reference | 412 | 0.68% |
+| sagun_narrative | 228 | 0.38% |
+| perso_arabic_register | 97 | 0.16% |
+| mixed_nirgun_sagun | 83 | 0.14% |
+| critique_both | 9 | 0.01% |
+| mixed_register | 2 | <0.01% |
 
 ## Feature Presence (Secondary Markers)
 
@@ -40,34 +41,39 @@ regardless of primary tag assignment.
 
 | Marker | Lines | % of Corpus |
 |--------|-------|-------------|
-| has_nirgun | 23,153 | 38.19% |
-| has_sanskritic | 15,630 | 25.78% |
-| has_ritual | 841 | 1.39% |
-| has_cleric | 460 | 0.76% |
-| has_perso_arabic | 441 | 0.73% |
-| has_sagun_narrative | 245 | 0.40% |
+| has_nirgun | 25,618 | 42.25% |
+| has_sanskritic | 18,319 | 30.21% |
+| has_ritual | 1,331 | 2.20% |
+| has_cleric | 578 | 0.95% |
+| has_perso_arabic | 174 | 0.29% |
+| has_sagun_narrative | 311 | 0.51% |
 
 ## Interpretation
 
-**56.6% of lines are "unmarked"** -- they contain no entities from our lexicon.
-This is expected: many lines consist of narrative connectives, emotional
-expressions, or vocabulary not covered by the 70-entity lexicon. The lexicon
-is deliberately focused on theologically significant terms, not exhaustive
-vocabulary.
+**49.7% of lines are "unmarked"** -- they contain no entities from the original
+six register dimensions. This has dropped from 56.6% in the earlier analysis
+because the expanded 124-entity lexicon now captures ethical, devotional,
+oneness, scriptural, and identity vocabulary that was previously invisible.
 
-**38.1% are nirgun-leaning** -- the single largest tagged category. This
-confirms the GGS as primarily a nirgun text: over a third of all lines
-contain vocabulary associated with the formless, attributeless divine.
+**42.1% are nirgun-leaning** -- the single largest tagged category (up from
+38.1%). This confirms the GGS as primarily a nirgun text: over two-fifths of
+all lines contain vocabulary associated with the formless, attributeless divine.
 
-**Only 3.35% are purely sanskritic** (without nirgun overlap). Most sanskritic
-vocabulary (Vedantic concepts like Maya, Brahm, Karam) appears *alongside*
-nirgun terms, reflecting the GGS's strategy of engaging with Indic philosophy
-while reinterpreting it through a nirgun lens.
+**5.85% are purely sanskritic** (without nirgun overlap), up from 3.35%.
+The expanded Sanskritic lexicon now captures additional scriptural references
+(Ved, Puran, Shastar, Simrit), clerical markers (Brahmin, Siddh), and
+ritual terms (Moorat, Yagya).
 
-**The "critique_both" tag (7 lines)** captures extremely rare passages where
-both ritual and cleric vocabulary appear on the same line -- direct
-simultaneous critique of both institutional religion and empty ritual.
+**The mixed_nirgun_sagun tag (83 lines)** identifies lines where incarnation
+mythology and nirgun theology coexist -- theologically significant passages
+where the Gurus use narrative to serve nirgun teaching. This is up from 66
+lines, reflecting the expanded sagun_narrative lexicon (now includes Sita,
+Dasrath, Ravan, Valmik, Durga, Lakshmi, Sarasvati, Kans, Gopi, Indr).
 
-**Mixed nirgun+sagun (66 lines)** identifies lines where incarnation mythology
-and nirgun theology coexist -- theologically significant passages where the
-Gurus use narrative to serve nirgun teaching.
+**Perso-Arabic-only lines dropped to 97** (from 261) because SAHIB was
+reclassified from perso_arabic to neutral. The remaining 97 lines represent
+genuinely Islamic/Sufi vocabulary: Allah, Khuda, Rabb, Maula, Noor, etc.
+
+**The "critique_both" tag (9 lines)** captures rare passages where both ritual
+and cleric vocabulary appear on the same line -- direct simultaneous critique
+of both institutional religion and empty ritual.

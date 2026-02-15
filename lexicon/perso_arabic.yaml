@@ -47,6 +47,130 @@ entities:
     added_version: "1.0.0"
     notes: "Master/Protector — Arabic title for God in Sufi usage"
 
+  - id: RAHMAN
+    canonical_form: ਰਹਮਾਨ
+    aliases:
+      - form: ਰਹਮਾਨ
+        type: exact
+      - form: ਰਹਮਾਨੁ
+        type: exact
+    category: divine_name
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "The Merciful — Arabic divine attribute"
+
+  - id: RAHIM
+    canonical_form: ਰਹੀਮ
+    aliases:
+      - form: ਰਹੀਮ
+        type: exact
+      - form: ਰਹੀਮੁ
+        type: exact
+    category: divine_name
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "The Compassionate — Arabic divine attribute"
+
+  - id: NOOR
+    canonical_form: ਨੂਰ
+    aliases:
+      - form: ਨੂਰ
+        type: exact
+      - form: ਨੂਰੁ
+        type: exact
+      - form: ਨੂਰਿ
+        type: exact
+    category: concept
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Divine Light — central Sufi/Islamic concept ('Aval Allah noor upaya')"
+
+  # -------------------------------------------------------------------------
+  # Islamic scriptural references
+  # -------------------------------------------------------------------------
+
+  - id: QURAN
+    canonical_form: ਕੁਰਾਣ
+    aliases:
+      - form: ਕੁਰਾਣ
+        type: exact
+      - form: ਕੁਰਾਣੁ
+        type: exact
+      - form: ਕੁਰਾਨ
+        type: exact
+    category: scriptural
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Quran — Islamic scripture"
+
+  - id: KITAB
+    canonical_form: ਕਿਤੇਬ
+    aliases:
+      - form: ਕਿਤੇਬ
+        type: exact
+      - form: ਕਿਤਾਬ
+        type: exact
+      - form: ਕਿਤੇਬੁ
+        type: exact
+    category: scriptural
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Book — typically refers to revealed scripture in Islamic context"
+
+  - id: NABI
+    canonical_form: ਨਬੀ
+    aliases:
+      - form: ਨਬੀ
+        type: exact
+    category: marker
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Prophet — Islamic prophetic tradition"
+
+  - id: PAIGAMBAR
+    canonical_form: ਪੈਗੰਬਰ
+    aliases:
+      - form: ਪੈਗੰਬਰ
+        type: exact
+      - form: ਪੈਗੰਬਰੁ
+        type: exact
+    category: marker
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Messenger/Prophet — Persian term for prophet"
+
+  # -------------------------------------------------------------------------
+  # Additional Islamic practice/place markers
+  # -------------------------------------------------------------------------
+
+  - id: MASJID
+    canonical_form: ਮਸੀਤ
+    aliases:
+      - form: ਮਸੀਤ
+        type: exact
+      - form: ਮਸੀਤਿ
+        type: exact
+    category: place
+    tradition: islamic
+    register: perso_arabic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Mosque — Islamic place of worship. GGS spelling is ਮਸੀਤ."
+
   # -------------------------------------------------------------------------
   # Islamic practices and concepts (markers)
   # -------------------------------------------------------------------------

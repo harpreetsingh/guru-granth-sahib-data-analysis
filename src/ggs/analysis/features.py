@@ -38,6 +38,11 @@ FEATURE_DIMENSIONS = [
     "sagun_narrative",
     "ritual",
     "cleric",
+    "ethical",
+    "devotional",
+    "oneness",
+    "scriptural",
+    "identity",
 ]
 
 
@@ -90,11 +95,21 @@ def _classify_entity(
     elif entity.register == "sanskritic":
         dimensions.append("sanskritic")
 
-    # Category-based dimensions
+    # Category-based dimensions (direct category mapping)
     if entity.category == "narrative":
         dimensions.append("sagun_narrative")
     elif entity.category == "practice":
         dimensions.append("ritual")
+    elif entity.category == "ethical":
+        dimensions.append("ethical")
+    elif entity.category == "devotional":
+        dimensions.append("devotional")
+    elif entity.category == "oneness":
+        dimensions.append("oneness")
+    elif entity.category == "scriptural":
+        dimensions.append("scriptural")
+    elif entity.category == "identity":
+        dimensions.append("identity")
     elif (
         entity.category == "marker"
         and entity.tradition in ("islamic", "vedantic", "yogic")

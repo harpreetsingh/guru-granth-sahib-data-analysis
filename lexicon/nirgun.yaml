@@ -141,6 +141,60 @@ entities:
     added_version: "1.0.0"
     notes: "Imperishable/Indestructible"
 
+  - id: AGOCHAR
+    canonical_form: ਅਗੋਚਰ
+    aliases:
+      - form: ਅਗੋਚਰ
+        type: exact
+      - form: ਅਗੋਚਰੁ
+        type: exact
+    category: divine_name
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Beyond the senses — nirgun divine attribute"
+
+  # -------------------------------------------------------------------------
+  # Oneness / non-duality markers
+  # -------------------------------------------------------------------------
+
+  - id: IK
+    canonical_form: ਇਕ
+    aliases:
+      - form: ਇਕੋ
+        type: exact
+      - form: ਏਕ
+        type: exact
+      - form: ਏਕੁ
+        type: exact
+      - form: ਏਕੰ
+        type: exact
+      - form: ਏਕੈ
+        type: exact
+    category: oneness
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "The One — non-duality marker. Excludes ਇਕ (too common as numeral) — uses ਇਕੋ and ਏਕ forms only."
+
+  - id: JOTI
+    canonical_form: ਜੋਤਿ
+    aliases:
+      - form: ਜੋਤਿ
+        type: exact
+      - form: ਜੋਤੀ
+        type: exact
+      - form: ਜੋਤ
+        type: exact
+    category: oneness
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Divine Light — the one light pervading all. Key non-duality concept."
+
   # -------------------------------------------------------------------------
   # Nirgun theological concepts
   # -------------------------------------------------------------------------

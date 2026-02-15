@@ -4,10 +4,12 @@
 
 ## Peak Density Locations
 
-For each register dimension, the top 3 angs with highest density reveal
-where specific vocabulary concentrates in the scripture.
+For each register dimension, the top angs with highest density reveal
+where specific vocabulary concentrates in the scripture. The expanded
+124-entity lexicon (346 aliases, 11 dimensions) provides finer-grained
+detection than earlier analyses.
 
-### Perso-Arabic Register
+### Perso-Arabic Register (0.29% of lines)
 
 | Ang | Density | Raga Section |
 |-----|---------|-------------|
@@ -19,7 +21,7 @@ Perso-Arabic vocabulary peaks in Raag Maru (angs 1083-1084). This section
 contains compositions by Kabir and other Bhagats that engage directly with
 Islamic concepts. Ang 1349 in Parbhati also shows elevated Perso-Arabic usage.
 
-### Sanskritic Register
+### Sanskritic Register (30.21% of lines)
 
 | Ang | Density | Raga Section |
 |-----|---------|-------------|
@@ -31,7 +33,7 @@ The highest Sanskritic concentration is in Raag Gauri at ang 273, where over
 40% of tokens are recognized Sanskritic entities. Gauri is one of the largest
 raga sections and contains many compositions dealing with Vedantic philosophy.
 
-### Nirgun Register
+### Nirgun Register (42.25% of lines)
 
 | Ang | Density | Raga Section |
 |-----|---------|-------------|
@@ -42,7 +44,7 @@ raga sections and contains many compositions dealing with Vedantic philosophy.
 Nirgun vocabulary peaks in Raag Vadhans and Bihagra -- sections known for
 deeply devotional compositions focused on the formless divine.
 
-### Sagun Narrative Register
+### Sagun Narrative Register (0.51% of lines)
 
 | Ang | Density | Raga Section |
 |-----|---------|-------------|
@@ -52,9 +54,11 @@ deeply devotional compositions focused on the formless divine.
 
 Mythological/incarnation references are most concentrated in Raag Bhairav and
 the Epilogue section, though even at their peak the density is very low (1.5%
-of tokens).
+of tokens). The expanded lexicon now includes goddess references (Durga, Lakshmi,
+Sarasvati), Ramayana figures (Sita, Dasrath, Ravan, Valmik), and additional
+Krishna-cycle characters (Kans, Gopi).
 
-### Ritual Register
+### Ritual Register (2.20% of lines)
 
 | Ang | Density | Raga Section |
 |-----|---------|-------------|
@@ -65,7 +69,7 @@ of tokens).
 Ritual vocabulary peaks in Raag Ramkali, which contains Sidh Gosht and other
 compositions that directly engage with ascetic and ritual practices.
 
-### Cleric Register
+### Cleric Register (0.95% of lines)
 
 | Ang | Density | Raga Section |
 |-----|---------|-------------|
@@ -73,9 +77,9 @@ compositions that directly engage with ascetic and ritual practices.
 | 908 | 0.0570 | Ramkali (876-974) |
 | 909 | 0.0463 | Ramkali (876-974) |
 
-References to religious authorities (Pandit, Qazi, Mullah) concentrate in
-Raag Suhi and Ramkali, consistent with compositions that critique
-institutional religion.
+References to religious authorities (Pandit, Qazi, Mullah, Brahmin, Siddh)
+concentrate in Raag Suhi and Ramkali, consistent with compositions that
+critique institutional religion.
 
 ## Pattern
 
@@ -84,3 +88,8 @@ in Maru, cleric/ritual critique in Ramkali and Suhi, Sanskritic philosophy in
 Gauri, and nirgun devotion in Vadhans/Bihagra. This is not random -- it
 reflects the thematic character of each raga section and the compositions
 assigned to them.
+
+The five new dimensions (ethical, devotional, oneness, scriptural, identity)
+are distributed more broadly across the corpus rather than clustering in
+specific ragas, reflecting their pervasive role in the GGS's theological
+discourse.

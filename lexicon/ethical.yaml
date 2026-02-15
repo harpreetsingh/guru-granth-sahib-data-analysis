@@ -1,0 +1,177 @@
+# ============================================================================
+# Ethical Lexicon — ethical.yaml
+# ============================================================================
+# Inner vices (Five Thieves / Panj Chor) and virtues referenced in the GGS.
+# These capture the ethical-prescriptive dimension of the text — the Stoic-like
+# concern with control of passions, ego dissolution, and cultivation of virtue.
+#
+# Reference: questions/Mapv2.md Section III, questions/Mapv3_harpreet.md Q12
+# Schema: lexicon/_schema.yaml
+# ============================================================================
+
+entities:
+  # -------------------------------------------------------------------------
+  # Five Thieves (Panj Chor) — inner vices
+  # -------------------------------------------------------------------------
+
+  - id: HAUMAI
+    canonical_form: ਹਉਮੈ
+    aliases:
+      - form: ਹਉਮੈ
+        type: exact
+    category: ethical
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Ego/self-centeredness — the root vice in Sikh theology"
+
+  - id: KAAM
+    canonical_form: ਕਾਮ
+    aliases:
+      - form: ਕਾਮ
+        type: exact
+      - form: ਕਾਮੁ
+        type: exact
+      - form: ਕਾਮਿ
+        type: exact
+    category: ethical
+    tradition: universal
+    register: sanskritic
+    polysemous: true
+    added_version: "2.0.0"
+    notes: "Lust/desire — one of the Five Thieves. Polysemous: also means 'work/task'."
+
+  - id: KRODH
+    canonical_form: ਕ੍ਰੋਧ
+    aliases:
+      - form: ਕ੍ਰੋਧ
+        type: exact
+      - form: ਕ੍ਰੋਧੁ
+        type: exact
+      - form: ਕ੍ਰੋਧਿ
+        type: exact
+    category: ethical
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Anger/wrath — one of the Five Thieves"
+
+  - id: LOBH
+    canonical_form: ਲੋਭ
+    aliases:
+      - form: ਲੋਭ
+        type: exact
+      - form: ਲੋਭੁ
+        type: exact
+      - form: ਲੋਭਿ
+        type: exact
+      - form: ਲੋਭੀ
+        type: exact
+    category: ethical
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Greed/avarice — one of the Five Thieves"
+
+  - id: MOH
+    canonical_form: ਮੋਹ
+    aliases:
+      - form: ਮੋਹ
+        type: exact
+      - form: ਮੋਹੁ
+        type: exact
+      - form: ਮੋਹਿ
+        type: exact
+    category: ethical
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Attachment/worldly bonds — one of the Five Thieves"
+
+  - id: AHANKAR
+    canonical_form: ਅਹੰਕਾਰ
+    aliases:
+      - form: ਅਹੰਕਾਰ
+        type: exact
+      - form: ਅਹੰਕਾਰੁ
+        type: exact
+      - form: ਅਹੰਕਾਰਿ
+        type: exact
+    category: ethical
+    tradition: universal
+    register: sanskritic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Pride/arrogance — sometimes counted as a sixth vice alongside the Five Thieves"
+
+  # -------------------------------------------------------------------------
+  # Virtues
+  # -------------------------------------------------------------------------
+
+  - id: DAYA
+    canonical_form: ਦਇਆ
+    aliases:
+      - form: ਦਇਆ
+        type: exact
+      - form: ਦਇਆਲ
+        type: exact
+      - form: ਦਇਆਲੁ
+        type: exact
+    category: ethical
+    tradition: universal
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Compassion/mercy — cardinal virtue"
+
+  - id: SANTOKH
+    canonical_form: ਸੰਤੋਖ
+    aliases:
+      - form: ਸੰਤੋਖ
+        type: exact
+      - form: ਸੰਤੋਖੁ
+        type: exact
+      - form: ਸੰਤੋਖਿ
+        type: exact
+    category: ethical
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Contentment — cardinal virtue, Stoic resonance"
+
+  - id: NIMRATA
+    canonical_form: ਨਿਮਰਤਾ
+    aliases:
+      - form: ਨਿਮਰਤਾ
+        type: exact
+      - form: ਨਿਮ੍ਰਤਾ
+        type: exact
+    category: ethical
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Humility — cardinal virtue"
+
+  - id: SEVA
+    canonical_form: ਸੇਵਾ
+    aliases:
+      - form: ਸੇਵਾ
+        type: exact
+      - form: ਸੇਵ
+        type: exact
+      - form: ਸੇਵਕ
+        type: exact
+      - form: ਸੇਵਕੁ
+        type: exact
+    category: ethical
+    tradition: sikh
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Selfless service — cardinal virtue in Sikh practice"

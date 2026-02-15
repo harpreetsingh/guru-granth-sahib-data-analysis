@@ -1,0 +1,53 @@
+# ============================================================================
+# Identity Lexicon — identity.yaml
+# ============================================================================
+# Religious identity labels used in the GGS. These are NOT divine names or
+# theological concepts — they are social/civilizational identity markers
+# used when the text addresses religious categories directly.
+#
+# Reference: questions/Mapv2.md Section VI, questions/Mapv3_harpreet.md Q9-10
+# Schema: lexicon/_schema.yaml
+# ============================================================================
+
+entities:
+  - id: HINDU
+    canonical_form: ਹਿੰਦੂ
+    aliases:
+      - form: ਹਿੰਦੂ
+        type: exact
+      - form: ਹਿੰਦੁ
+        type: exact
+    category: identity
+    tradition: null
+    register: neutral
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Hindu — religious identity label, often in universalist or critique context"
+
+  - id: MUSALMAN
+    canonical_form: ਮੁਸਲਮਾਨ
+    aliases:
+      - form: ਮੁਸਲਮਾਨ
+        type: exact
+      - form: ਮੁਸਲਮਾਨੁ
+        type: exact
+    category: identity
+    tradition: null
+    register: perso_arabic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Muslim — religious identity label"
+
+  - id: TURK
+    canonical_form: ਤੁਰਕ
+    aliases:
+      - form: ਤੁਰਕ
+        type: exact
+      - form: ਤੁਰਕੁ
+        type: exact
+    category: identity
+    tradition: null
+    register: perso_arabic
+    polysemous: false
+    added_version: "2.0.0"
+    notes: "Turk — used in GGS as a synonym for Muslim"
