@@ -116,9 +116,9 @@ illustrate nirgun teaching rather than as objects of worship.
 
 | Term | Meaning |
 |------|---------|
-| **Pir** | Beloved / husband-lord. A bridal-mysticism term (359 matches) where the devotee is the bride and God is the husband. |
-| **Kant** | Husband-lord / beloved. Another bridal-metaphor term (145 matches). |
-| **Sohagan** | A blessed/fortunate bride -- one who has found union with the divine. |
+| **Pir** | Beloved / lover. A bridal-mysticism term (359 matches) where the devotee is the lover and God is the beloved. |
+| **Kant** | Beloved / lover. Another bridal-metaphor term (145 matches). |
+| **Sohagan** | One who has found her beloved -- a blessed bride in union with the divine. |
 | **Birha** | Separation-longing -- the pain of being apart from the divine beloved. A core Bhakti emotion (26 matches). |
 | **Prem** | Love / divine love (228 matches). |
 | **Sahaj** | Equipoise / natural state of spiritual balance (976 matches). |
