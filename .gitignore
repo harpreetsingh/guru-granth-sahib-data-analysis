@@ -49,5 +49,8 @@ data/web_bundle/corpus/*
 .vscode/
 *.swp
 
+# Testing
+.hypothesis/
+
 # OS
 .DS_Store
