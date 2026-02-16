@@ -190,10 +190,8 @@ def lint_file(
         return
 
     if data is None or "entities" not in data:
-        report.add(
-            "ERROR", "schema_conformance", fname, None,
-            "Missing 'entities' key",
-        )
+        # Skip files that use a different schema
+        # (e.g. polysemy.yaml has a 'polysemy' top-level key)
         return
 
     for raw in data["entities"]:
