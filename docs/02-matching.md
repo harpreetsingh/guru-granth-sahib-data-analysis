@@ -153,8 +153,8 @@ subordinated to nirgun teaching:
 | SHIV | ਸ਼ਿਵ | 86 | The Destroyer (Trimurti) |
 | KRISHNA | ਕ੍ਰਿਸ਼ਨ | 68 | Avatar of Vishnu |
 | BRAHMA | ਬ੍ਰਹਮਾ | 50 | The Creator (Trimurti) |
-| BISN (Vishnu) | ਬਿਸਨ | 40 | The Preserver (Trimurti) |
-| INDR | ਇੰਦ੍ਰ | 27 | King of gods (Vedic) |
+| Vishnu (BISN) | ਬਿਸਨ | 40 | The Preserver (Trimurti) |
+| Indra (INDR) | ਇੰਦ੍ਰ | 27 | King of gods (Vedic) |
 | PRAHLAD | ਪ੍ਰਹਿਲਾਦ | 18 | Devotee saved by Vishnu |
 | DHRU | ਧ੍ਰੂ | 16 | The steadfast devotee |
 | RAVAN | ਰਾਵਣ | 9 | Demon king of Lanka (Ramayana) |
@@ -188,9 +188,8 @@ survey or critique textual authority.
 
 ### Perso-Arabic Entities
 
-**Perso-Arabic terms are sparse.** After reclassifying SAHIB from perso_arabic
-to neutral (it functions as a universal divine name, not an Islamic marker),
-the Perso-Arabic register totals **136 matches** across 8 entities:
+**Perso-Arabic terms are sparse.** The Perso-Arabic register totals **136
+matches** across 8 entities:
 
 | Entity | Gurmukhi | Matches |
 |--------|----------|---------|

@@ -73,11 +73,10 @@ cleric critique (0.95%) and interfaith engagement (0.29%) combined.
 ਜੋਤਿ (divine light pervading all). These lines assert the collapse of metaphysical
 duality -- a key Advaita-adjacent theme in the GGS.
 
-**Perso-Arabic is the second-rarest register at 0.29%.** After reclassifying
-SAHIB from perso-arabic to neutral (its actual usage is register-neutral), the
-true Perso-Arabic register drops to under 1 in 300 lines. This is consistent
-with the GGS being primarily composed in a Sanskritic-Punjabi register, with
-selective Perso-Arabic borrowings concentrated in specific compositions.
+**Perso-Arabic is the second-rarest register at 0.29%.** Fewer than 1 in 300
+lines contain Perso-Arabic vocabulary. This is consistent with the GGS being
+primarily composed in a Sanskritic-Punjabi register, with selective
+Perso-Arabic borrowings concentrated in specific compositions.
 
 **Identity vocabulary is the rarest dimension (0.05%).** Only 31 lines in the
 entire corpus contain explicit religious identity labels (Hindu, Musalman, Turk).

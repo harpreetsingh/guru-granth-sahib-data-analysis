@@ -71,10 +71,10 @@ as a Bhakti text alongside its nirgun theology.
 
 ## Finding 6: Perso-Arabic vocabulary occupies 0.29% of the text
 
-After reclassifying SAHIB from perso-arabic to neutral, only **174 lines**
-(0.29%) contain genuine Perso-Arabic register vocabulary. The civilizational
-density ratio is **99.9:1** (Sanatan to Islamic). The GGS expresses its
-universal theology through overwhelmingly Sanskritic-Punjabi vocabulary.
+Only **174 lines** (0.29%) contain Perso-Arabic register vocabulary. The
+civilizational density ratio is **99.9:1** (Sanatan to Islamic). The GGS
+expresses its universal theology through overwhelmingly Sanskritic-Punjabi
+vocabulary.
 
 ## Finding 7: HINDU and TURK almost always appear together
 
@@ -102,7 +102,7 @@ Each author gravitates toward different dimensions:
 | Guru Ram Das | Highest nirgun and sanskritic | 62.27% / 48.97% |
 | Guru Amar Das | Highest ethical | 7.31% |
 | Guru Tegh Bahadur | Highest devotional and ritual | 11.40% / 6.28% |
-| Kabir | Highest identity, cross-tradition | 0.55% identity |
+| Kabir | Highest identity (names Hindu/Muslim communities), cross-tradition | 0.55% identity |
 | Farid | Highest perso_arabic, Sufi voice | 5.70% |
 | Ravidas | Highest devotional among Bhagats | 13.89% |
 

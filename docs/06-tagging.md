@@ -84,9 +84,8 @@ where the Gurus use narrative to serve nirgun teaching. This is up from 66
 lines, reflecting the expanded sagun_narrative lexicon (now includes Sita,
 Dasrath, Ravan, Valmik, Durga, Lakshmi, Sarasvati, Kans, Gopi, Indr).
 
-**Perso-Arabic-only lines dropped to 97** (from 261) because SAHIB was
-reclassified from perso_arabic to neutral. The remaining 97 lines represent
-genuinely Islamic/Sufi vocabulary: Allah, Khuda, Rabb, Maula, Noor, etc.
+**Perso-Arabic-only lines total 97** -- genuinely Islamic/Sufi vocabulary:
+Allah, Khuda, Rabb, Maula, Noor, etc.
 
 **The "critique_both" tag (9 lines)** captures rare passages where both ritual
 and cleric vocabulary appear on the same line -- direct simultaneous critique

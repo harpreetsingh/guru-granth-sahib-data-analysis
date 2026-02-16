@@ -31,7 +31,7 @@ like HINDU-TURK.
 | HAJI | KHUDA | 4.634 | 5 |
 | AJOONI | NIRVAIR | 4.581 | 33 |
 | AKAL | SATNAM | 4.465 | 27 |
-| BISN | BRAHMA | 4.397 | 28 |
+| Vishnu | Brahma | 4.397 | 28 |
 | ALLAH | KHUDA | 4.366 | 6 |
 | NIRVAIR | SATNAM | 4.234 | 29 |
 | AKAL | NIRVAIR | 4.230 | 35 |
@@ -46,10 +46,10 @@ like HINDU-TURK.
 | PURAN | SIMRIT | 3.036 | 8 |
 | BARAT | POOJA | 3.022 | 7 |
 | AKAL | NIRBHAU | 3.006 | 38 |
-| BISN | SHIV | 2.971 | 15 |
+| Vishnu | Shiv | 2.971 | 15 |
 | KANT | SOHAGAN | 2.958 | 15 |
 | NIRBHAU | SATNAM | 2.892 | 29 |
-| INDR | SHIV | 2.879 | 10 |
+| Indra | Shiv | 2.879 | 10 |
 | NIRBHAU | NIRVAIR | 2.746 | 40 |
 | BRAHMA | QAZI | 2.700 | 5 |
 | PURAN | SHASTAR | 2.595 | 11 |
@@ -123,8 +123,8 @@ critique textual authority.
 
 ### The Brahma/Vishnu/Shiva Trinity Cluster
 
-BISN-BRAHMA (PMI 4.397), BISN-SHIV (2.971), INDR-SHIV (2.879) confirm that
-the Hindu Trinity (Brahma the Creator, Vishnu the Preserver, Shiva the
+Vishnu-Brahma (PMI 4.397), Vishnu-Shiv (2.971), Indra-Shiv (2.879) confirm
+that the Hindu Trinity (Brahma the Creator, Vishnu the Preserver, Shiva the
 Destroyer) appears as a constellation, not individually. When the GGS mentions
 one member of the Trinity, it tends to mention the others -- typically in
 compositions that assert the formless divine is beyond all three forms.
