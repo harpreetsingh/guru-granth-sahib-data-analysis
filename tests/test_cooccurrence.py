@@ -490,7 +490,7 @@ class TestComputeCooccurrence:
             p for p in pairs
             if p.entity_a == "A" and p.entity_b == "B"
         )
-        assert ab_pair.pmi > 0
+        assert ab_pair.pmi is not None and ab_pair.pmi > 0
 
     def test_jaccard_correct(self) -> None:
         # A in w1, w2, w3; B in w1, w2; both in w1, w2

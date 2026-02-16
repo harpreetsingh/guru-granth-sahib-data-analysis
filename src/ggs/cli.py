@@ -283,7 +283,6 @@ def corpus_validate(
     ]
 
     report = validate_corpus(records)
-    report.display() if hasattr(report, "display") else None
 
     _display_result_table("Corpus Validation", {
         "Lines": str(report.total_lines),

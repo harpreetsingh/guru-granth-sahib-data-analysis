@@ -147,7 +147,7 @@ def parse_ang(ang: int) -> list[dict]:
     if not gurb_lines:
         # Approach 2: BeautifulSoup with case-insensitive search
         for p in soup.find_all("p"):
-            cls = p.get("class", [])
+            cls = p.get("class") or []
             cls_str = " ".join(cls) if isinstance(cls, list) else str(cls)
             if "gurb" in cls_str.lower():
                 span = p.find("span")

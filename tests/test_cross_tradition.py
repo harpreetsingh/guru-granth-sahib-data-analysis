@@ -208,7 +208,10 @@ class TestFilterCrossTraditionPairs:
         # Pairs with NPMI should come first, sorted by NPMI desc
         npmi_pairs = [p for p in result if p.npmi is not None]
         for i in range(len(npmi_pairs) - 1):
-            assert npmi_pairs[i].npmi >= npmi_pairs[i + 1].npmi
+            a_npmi = npmi_pairs[i].npmi
+            b_npmi = npmi_pairs[i + 1].npmi
+            assert a_npmi is not None and b_npmi is not None
+            assert a_npmi >= b_npmi
 
     def test_none_pmi_pairs_sorted_last(
         self,

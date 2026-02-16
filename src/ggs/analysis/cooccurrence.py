@@ -502,17 +502,14 @@ def compute_all_cooccurrence(
         f"across {len(records)} lines{stability_str}...[/bold]\n",
     )
 
-    cooccurrence_kwargs = {
-        "min_count": min_count,
-        "min_entity_freq": min_entity_freq,
-        "smoothing_k": smoothing_k,
-        "min_pmi_support": min_pmi_support,
-    }
-
     # Line-level co-occurrence
     line_windows = _group_matches_by_line(matches)
     line_pairs = compute_cooccurrence(
-        line_windows, WindowLevel.LINE, **cooccurrence_kwargs,
+        line_windows, WindowLevel.LINE,
+        min_count=min_count,
+        min_entity_freq=min_entity_freq,
+        smoothing_k=smoothing_k,
+        min_pmi_support=min_pmi_support,
     )
     _console.print(
         f"  Line-level: {len(line_pairs)} pairs "
@@ -523,7 +520,11 @@ def compute_all_cooccurrence(
     line_to_shabad = build_line_to_shabad_map(records)
     shabad_windows = _group_matches_by_shabad(matches, line_to_shabad)
     shabad_pairs = compute_cooccurrence(
-        shabad_windows, WindowLevel.SHABAD, **cooccurrence_kwargs,
+        shabad_windows, WindowLevel.SHABAD,
+        min_count=min_count,
+        min_entity_freq=min_entity_freq,
+        smoothing_k=smoothing_k,
+        min_pmi_support=min_pmi_support,
     )
     _console.print(
         f"  Shabad-level: {len(shabad_pairs)} pairs "

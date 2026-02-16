@@ -26,7 +26,7 @@ from enum import StrEnum
 from pathlib import Path
 from typing import Any
 
-import ahocorasick
+import ahocorasick  # ty: ignore[unresolved-import]
 from rich.console import Console
 
 from ggs.lexicon.loader import LexiconIndex
